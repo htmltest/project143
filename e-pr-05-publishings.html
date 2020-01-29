@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>e-PR</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/nouislider/nouislider.css" />
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+                        <div class="logo"><a href="#"></a></div>
+
+                        <nav>
+                            <ul>
+                                <li class="active">
+                                    <a href="#" class="nav-parent">О нас</a>
+                                    <ul>
+                                        <li><a href="#">О проекте</a></li>
+                                        <li class="active"><a href="#">Издательствам</a></li>
+                                        <li><a href="#">Клиентам</a></li>
+                                        <li><a href="#">Новости</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Каталог СМИ</a></li>
+                                <li>
+                                    <a href="#" class="nav-parent">Услуги</a>
+                                    <ul>
+                                        <li><a href="#">Работа со средствами массовой информации</a></li>
+                                        <li><a href="#">Работа с текстами</a></li>
+                                        <li><a href="#">Мониторинг СМИ</a></li>
+                                        <li><a href="#">Прогнозирование охвата будущих публикаций</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Тарифы</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="header-user">
+                            <a href="#" class="header-user-link"><svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.1205 9.39737C12.9412 8.7544 13.541 7.8714 13.8362 6.87141C14.1314 5.87142 14.1072 4.80426 13.7671 3.81864C13.4271 2.83302 12.788 1.97803 11.939 1.37284C11.0899 0.767643 10.0733 0.442383 9.03061 0.442383C7.98797 0.442383 6.97129 0.767643 6.12227 1.37284C5.27324 1.97803 4.63416 2.83302 4.29408 3.81864C3.954 4.80426 3.92986 5.87142 4.22503 6.87141C4.5202 7.8714 5.11998 8.7544 5.94077 9.39737C4.3896 10.0151 3.05922 11.0837 2.12141 12.4651C1.1836 13.8465 0.681411 15.4774 0.679688 17.147V17.9821C0.679688 18.2036 0.76767 18.416 0.92428 18.5726C1.08089 18.7292 1.2933 18.8172 1.51478 18.8172C1.73626 18.8172 1.94867 18.7292 2.10528 18.5726C2.26189 18.416 2.34987 18.2036 2.34987 17.9821V17.147C2.34987 15.3752 3.05373 13.6759 4.30662 12.423C5.5595 11.1701 7.25877 10.4663 9.03061 10.4663C10.8025 10.4663 12.5017 11.1701 13.7546 12.423C15.0075 13.6759 15.7114 15.3752 15.7114 17.147V17.9821C15.7114 18.2036 15.7993 18.416 15.9559 18.5726C16.1126 18.7292 16.325 18.8172 16.5464 18.8172C16.7679 18.8172 16.9803 18.7292 17.1369 18.5726C17.2936 18.416 17.3815 18.2036 17.3815 17.9821V17.147C17.3798 15.4774 16.8776 13.8465 15.9398 12.4651C15.002 11.0837 13.6716 10.0151 12.1205 9.39737ZM5.69024 5.45573C5.69024 4.79507 5.88615 4.14924 6.2532 3.59992C6.62024 3.0506 7.14193 2.62246 7.75231 2.36963C8.36268 2.11681 9.03432 2.05066 9.68228 2.17955C10.3303 2.30843 10.9255 2.62657 11.3926 3.09373C11.8598 3.56089 12.1779 4.15609 12.3068 4.80406C12.4357 5.45203 12.3695 6.12366 12.1167 6.73404C11.8639 7.34441 11.4357 7.8661 10.8864 8.23315C10.3371 8.60019 9.69127 8.7961 9.03061 8.7961C8.14469 8.7961 7.29505 8.44417 6.66861 7.81773C6.04217 7.19129 5.69024 6.34165 5.69024 5.45573Z" /></svg></a>
+                        </div>
+
+                        <div class="header-cart">
+                            <a href="#" class="header-cart-link"><svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.9978 4.26514H5.10539L4.42639 1.60929C4.36997 1.3887 4.24272 1.19271 4.06417 1.05142C3.88561 0.910128 3.66562 0.83134 3.43797 0.827148H0.988403C0.76045 0.827148 0.541834 0.917702 0.380647 1.07889C0.21946 1.24008 0.128906 1.45869 0.128906 1.68665C0.128906 1.9146 0.21946 2.13321 0.380647 2.2944C0.541834 2.45559 0.76045 2.54614 0.988403 2.54614H2.90508L3.56689 5.31372L5.28589 13.7196C5.32456 13.9587 5.44687 14.1764 5.63103 14.3338C5.81519 14.4912 6.04924 14.5781 6.2915 14.5791H17.1727C17.4254 14.5759 17.668 14.4793 17.8537 14.3079C18.0393 14.1365 18.155 13.9025 18.1783 13.6508L19.0378 5.39967C19.0524 5.25509 19.0362 5.10907 18.9904 4.97117C18.9446 4.83327 18.8701 4.70662 18.7719 4.5995C18.6737 4.49238 18.554 4.40722 18.4206 4.3496C18.2872 4.29198 18.1431 4.26319 17.9978 4.26514ZM16.5539 12.8601H6.85877L5.48357 5.98413H17.2415L16.5539 12.8601Z" /><path d="M8.30487 18.017C9.0169 18.017 9.59411 17.4398 9.59411 16.7277C9.59411 16.0157 9.0169 15.4385 8.30487 15.4385C7.59284 15.4385 7.01562 16.0157 7.01562 16.7277C7.01562 17.4398 7.59284 18.017 8.30487 18.017Z" /><path d="M14.3205 18.017C15.0325 18.017 15.6097 17.4398 15.6097 16.7277C15.6097 16.0157 15.0325 15.4385 14.3205 15.4385C13.6085 15.4385 13.0312 16.0157 13.0312 16.7277C13.0312 17.4398 13.6085 18.017 14.3205 18.017Z" /></svg></a>
+                        </div>
+
+                        <div class="header-lang">
+                            <a href="#" class="header-lang-link">En</a>
+                        </div>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.00611 0C8.34286 4.94866e-05 9.65183 0.395846 10.7793 1.1409C11.9067 1.88595 12.8058 2.94932 13.371 4.2061C13.9361 5.46287 14.1438 6.86086 13.9697 8.23586C13.7956 9.61085 13.2469 10.9057 12.388 11.9684L15.7418 15.4387C15.8237 15.5237 15.8886 15.6245 15.9329 15.7354C15.9772 15.8464 16 15.9653 16 16.0854C16 16.2055 15.9772 16.3245 15.9329 16.4354C15.8886 16.5464 15.8237 16.6472 15.7418 16.7321C15.5765 16.9036 15.3523 17 15.1184 17C15.0027 17 14.888 16.9763 14.7811 16.9304C14.6741 16.8844 14.577 16.8171 14.4951 16.7321L11.115 13.1981C9.92583 14.0941 8.49336 14.5757 7.02367 14.5734C5.16088 14.5734 3.37438 13.8057 2.05719 12.4392C0.739992 11.0727 1.90735e-06 9.21928 1.90735e-06 7.28672C1.90735e-06 5.35416 0.739992 3.50076 2.05719 2.13423C3.37438 0.767706 5.16088 0 7.02367 0H7.00611ZM7.00611 12.7518C8.04797 12.7518 9.06644 12.4312 9.93272 11.8307C10.799 11.2302 11.4742 10.3767 11.8729 9.3781C12.2716 8.37949 12.3759 7.28066 12.1726 6.22054C11.9694 5.16043 11.4677 4.18665 10.731 3.42235C9.99427 2.65805 9.05564 2.13756 8.0338 1.92669C7.01195 1.71582 5.95279 1.82405 4.99023 2.23768C4.02767 2.65132 3.20496 3.35178 2.62614 4.25051C2.04731 5.14923 1.73836 6.20584 1.73836 7.28672C1.73836 8.73614 2.29335 10.1262 3.28125 11.1511C4.26914 12.176 5.60902 12.7518 7.00611 12.7518Z" /></svg></a>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="search-window">
+                    <div class="search-window-form">
+                        <div class="container">
+                            <form action="#" method="post">
+                                <div class="search-window-form-input"><input type="text" name="search" value="" class="required" placeholder="Поиск..." /></div>
+                                <div class="search-window-form-submit"><input type="submit" value="" /></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="search-window-close"></div>
+                </div>
+
+                <div class="publishings-header">
+                    <div class="container">
+                        <div class="about-header-inner">
+                            <div class="about-header-container">
+                                <h1>Издательствам</h1>
+                                <div class="about-header-text">Платформа e-PR предлагает изданиям и площадкам<br /> размещение на бесплатной основе.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- container -->
+                <div class="container">
+
+                    <!-- publishings why -->
+                    <div class="publishings-why">
+                        <div class="main-title">
+                            <div class="main-title-number">01</div>
+                            <h2>Почему с нами стоит работать?</h2>
+                        </div>
+
+                        <div class="publishings-why-list">
+                            <div class="publishings-why-item">
+                                <div class="publishings-why-item-inner">
+                                    <div class="publishings-why-item-icon"><img src="images/publishings-why-1.svg" alt="" /></div>
+                                    <div class="publishings-why-item-title">Дополнительная возможность по притоку клиентов</div>
+                                    <div class="publishings-why-item-text">Все представленные издания будут индексироваться в поисковиках. Специальный вывод самых популярных у клиентов изданий на главной странице сайта. Рекомендации для клиентов по направлениям.</div>
+                                </div>
+                            </div>
+
+                            <div class="publishings-why-item">
+                                <div class="publishings-why-item-inner">
+                                    <div class="publishings-why-item-icon"><img src="images/publishings-why-2.svg" alt="" /></div>
+                                    <div class="publishings-why-item-title">Упрощенная система коммуникации с клиентом</div>
+                                    <div class="publishings-why-item-text">Согласование материалов, внесение правок происходит путем общения по одной электронной почте, что значительно сокращает время при подготовке материала до публикации.</div>
+                                </div>
+                            </div>
+
+                            <div class="publishings-why-item">
+                                <div class="publishings-why-item-inner">
+                                    <div class="publishings-why-item-icon"><img src="images/publishings-why-3.svg" alt="" /></div>
+                                    <div class="publishings-why-item-title">Наглядная оценка эффективности</div>
+                                    <div class="publishings-why-item-text">Издание сразу сможет видеть, сколько клиентов приходит через платформу e-PR.</div>
+                                </div>
+                            </div>
+
+                            <div class="publishings-why-item">
+                                <div class="publishings-why-item-inner">
+                                    <div class="publishings-why-item-icon"><img src="images/publishings-why-4.svg" alt="" /></div>
+                                    <div class="publishings-why-item-title">Оперативная помощь менеджеров при возникновении вопросов</div>
+                                    <div class="publishings-why-item-text">Наши менеджеры в любое время смогут помочь в решении возникающих вопросов, так как они находятся в разных точках мира, что исключает проблемы, связанные с разными часовыми поясами.</div>
+                                </div>
+                            </div>
+
+                            <div class="publishings-why-item">
+                                <div class="publishings-why-item-inner">
+                                    <div class="publishings-why-item-icon"><img src="images/publishings-why-5.svg" alt="" /></div>
+                                    <div class="publishings-why-item-title">Единый договор с e-PR</div>
+                                    <div class="publishings-why-item-text">Весь документооборот берет на себя платформа, что значительно упрощает коммуникацию издания с клиентом.</div>
+                                </div>
+                            </div>
+
+                            <div class="publishings-why-item">
+                                <div class="publishings-why-item-inner">
+                                    <div class="publishings-why-item-icon"><img src="images/publishings-why-6.svg" alt="" /></div>
+                                    <div class="publishings-why-item-title">Гарантированная оплата публикаций</div>
+                                    <div class="publishings-why-item-text">Только 100% предоплата.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- publishings why END -->
+
+                </div>
+                <!-- container END -->
+
+                <!-- main catalogue -->
+                <div class="main-catalogue publishings-catalogue">
+                    <div class="container">
+                        <div class="main-title">
+                            <div class="main-title-number">02</div>
+                            <h2>С нами уже сотрудничают</h2>
+                        </div>
+
+                        <!-- catalogue -->
+                        <div class="catalogue">
+                            <div class="catalogue-inner">
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-01.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-flag"><img src="files/flag-01.png" alt="" /></div>
+                                                <div class="catalogue-item-title">Коммерсант</div>
+                                                <div class="catalogue-item-url"><span data-href="http://kommersant.ru">kommersant.ru</span></div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-item">Посещаемость: <span>1 232 K</span></div>
+                                                    <div class="catalogue-item-info-item">Тираж: <span>100 000 экз.</span></div>
+                                                    <div class="catalogue-item-info-item">Язык: <span>Русский</span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-02.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-flag"><img src="files/flag-02.png" alt="" /></div>
+                                                <div class="catalogue-item-title">Ведомости</div>
+                                                <div class="catalogue-item-url"><span data-href="http://vedomosti.ru" target="_blank">vedomosti.ru</span></div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-item">Посещаемость: <span>1 232 K</span></div>
+                                                    <div class="catalogue-item-info-item">Тираж: <span>100 000 экз.</span></div>
+                                                    <div class="catalogue-item-info-item">Язык: <span>Русский</span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-03.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-flag"><img src="files/flag-01.png" alt="" /></div>
+                                                <div class="catalogue-item-title">Аргументы и факты</div>
+                                                <div class="catalogue-item-url"><span data-href="http://aif.ru" target="_blank">aif.ru</span></div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-item">Посещаемость: <span>1 232 K</span></div>
+                                                    <div class="catalogue-item-info-item">Тираж: <span>100 000 экз.</span></div>
+                                                    <div class="catalogue-item-info-item">Язык: <span>Русский</span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-04.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-flag"><img src="files/flag-03.png" alt="" /></div>
+                                                <div class="catalogue-item-title">Ведомости</div>
+                                                <div class="catalogue-item-url"><span data-href="http://vedomosti.ru" target="_blank">vedomosti.ru</span></div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-item">Посещаемость: <span>1 232 K</span></div>
+                                                    <div class="catalogue-item-info-item">Тираж: <span>100 000 экз.</span></div>
+                                                    <div class="catalogue-item-info-item">Язык: <span>Русский</span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-02.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-flag"><img src="files/flag-02.png" alt="" /></div>
+                                                <div class="catalogue-item-title">Ведомости</div>
+                                                <div class="catalogue-item-url"><span data-href="http://vedomosti.ru" target="_blank">vedomosti.ru</span></div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-item">Посещаемость: <span>1 232 K</span></div>
+                                                    <div class="catalogue-item-info-item">Тираж: <span>100 000 экз.</span></div>
+                                                    <div class="catalogue-item-info-item">Язык: <span>Русский</span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-01.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-flag"><img src="files/flag-01.png" alt="" /></div>
+                                                <div class="catalogue-item-title">Коммерсант</div>
+                                                <div class="catalogue-item-url"><span data-href="http://kommersant.ru" target="_blank">kommersant.ru</span></div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-item">Посещаемость: <span>1 232 K</span></div>
+                                                    <div class="catalogue-item-info-item">Тираж: <span>100 000 экз.</span></div>
+                                                    <div class="catalogue-item-info-item">Язык: <span>Русский</span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-04.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-flag"><img src="files/flag-03.png" alt="" /></div>
+                                                <div class="catalogue-item-title">Ведомости</div>
+                                                <div class="catalogue-item-url"><span data-href="http://vedomosti.ru" target="_blank">vedomosti.ru</span></div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-item">Посещаемость: <span>1 232 K</span></div>
+                                                    <div class="catalogue-item-info-item">Тираж: <span>100 000 экз.</span></div>
+                                                    <div class="catalogue-item-info-item">Язык: <span>Русский</span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-03.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-flag"><img src="files/flag-01.png" alt="" /></div>
+                                                <div class="catalogue-item-title">Аргументы и факты</div>
+                                                <div class="catalogue-item-url"><span data-href="http://aif.ru" target="_blank">aif.ru</span></div>
+                                                <div class="catalogue-item-info">
+                                                    <div class="catalogue-item-info-item">Посещаемость: <span>1 232 K</span></div>
+                                                    <div class="catalogue-item-info-item">Тираж: <span>100 000 экз.</span></div>
+                                                    <div class="catalogue-item-info-item">Язык: <span>Русский</span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- catalogue item END -->
+
+                            </div>
+                        </div>
+                        <!-- catalogue END -->
+
+                    </div>
+                </div>
+                <!-- main catalogue END -->
+
+                <a href="#" class="main-link">Смотрите еще 18371 изданий</a>
+
+                <!-- container -->
+                <div class="container">
+
+                    <!-- reviews -->
+                    <div class="reviews">
+                        <div class="main-title">
+                            <div class="main-title-number">03</div>
+                            <h2>Отзывы партнеров</h2>
+                        </div>
+
+                        <div class="reviews-list">
+                            <div class="reviews-list-item">
+                                <div class="reviews-list-item-inner">
+                                    <div class="reviews-list-item-logo"><img src="files/reviews-logo-1.png" alt="" /></div>
+                                    <div class="reviews-list-item-content">
+                                        <div class="reviews-list-item-name">Коммерсант</div>
+                                        <div class="reviews-list-item-url"><a href="#" target="_blank">kommersant.ru</a></div>
+                                        <div class="reviews-list-item-anonce">В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.</div>
+                                    </div>
+                                    <div class="reviews-list-item-detail"><a href="#">Подробный отзыв<svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.7071 8.70711C45.0976 8.31658 45.0976 7.68342 44.7071 7.29289L38.3431 0.928932C37.9526 0.538408 37.3195 0.538408 36.9289 0.928932C36.5384 1.31946 36.5384 1.95262 36.9289 2.34315L42.5858 8L36.9289 13.6569C36.5384 14.0474 36.5384 14.6805 36.9289 15.0711C37.3195 15.4616 37.9526 15.4616 38.3431 15.0711L44.7071 8.70711ZM0 9H44V7H0V9Z" /></svg></a></div>
+                                </div>
+                            </div>
+                            <div class="reviews-list-item">
+                                <div class="reviews-list-item-inner">
+                                    <div class="reviews-list-item-logo"><img src="files/reviews-logo-2.png" alt="" /></div>
+                                    <div class="reviews-list-item-content">
+                                        <div class="reviews-list-item-name">Ведомости</div>
+                                        <div class="reviews-list-item-url"><a href="#" target="_blank">vedomosti.ru</a></div>
+                                        <div class="reviews-list-item-anonce">В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.</div>
+                                    </div>
+                                    <div class="reviews-list-item-detail"><a href="#">Подробный отзыв<svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.7071 8.70711C45.0976 8.31658 45.0976 7.68342 44.7071 7.29289L38.3431 0.928932C37.9526 0.538408 37.3195 0.538408 36.9289 0.928932C36.5384 1.31946 36.5384 1.95262 36.9289 2.34315L42.5858 8L36.9289 13.6569C36.5384 14.0474 36.5384 14.6805 36.9289 15.0711C37.3195 15.4616 37.9526 15.4616 38.3431 15.0711L44.7071 8.70711ZM0 9H44V7H0V9Z" /></svg></a></div>
+                                </div>
+                            </div>
+                            <div class="reviews-list-item">
+                                <div class="reviews-list-item-inner">
+                                    <div class="reviews-list-item-logo"><img src="files/reviews-logo-1.png" alt="" /></div>
+                                    <div class="reviews-list-item-content">
+                                        <div class="reviews-list-item-name">Коммерсант</div>
+                                        <div class="reviews-list-item-url"><a href="#" target="_blank">kommersant.ru</a></div>
+                                        <div class="reviews-list-item-anonce">В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.</div>
+                                    </div>
+                                    <div class="reviews-list-item-detail"><a href="#">Подробный отзыв<svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.7071 8.70711C45.0976 8.31658 45.0976 7.68342 44.7071 7.29289L38.3431 0.928932C37.9526 0.538408 37.3195 0.538408 36.9289 0.928932C36.5384 1.31946 36.5384 1.95262 36.9289 2.34315L42.5858 8L36.9289 13.6569C36.5384 14.0474 36.5384 14.6805 36.9289 15.0711C37.3195 15.4616 37.9526 15.4616 38.3431 15.0711L44.7071 8.70711ZM0 9H44V7H0V9Z" /></svg></a></div>
+                                </div>
+                            </div>
+                            <div class="reviews-list-item">
+                                <div class="reviews-list-item-inner">
+                                    <div class="reviews-list-item-logo"><img src="files/reviews-logo-2.png" alt="" /></div>
+                                    <div class="reviews-list-item-content">
+                                        <div class="reviews-list-item-name">Ведомости</div>
+                                        <div class="reviews-list-item-url"><a href="#" target="_blank">vedomosti.ru</a></div>
+                                        <div class="reviews-list-item-anonce">В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.</div>
+                                    </div>
+                                    <div class="reviews-list-item-detail"><a href="#">Подробный отзыв<svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.7071 8.70711C45.0976 8.31658 45.0976 7.68342 44.7071 7.29289L38.3431 0.928932C37.9526 0.538408 37.3195 0.538408 36.9289 0.928932C36.5384 1.31946 36.5384 1.95262 36.9289 2.34315L42.5858 8L36.9289 13.6569C36.5384 14.0474 36.5384 14.6805 36.9289 15.0711C37.3195 15.4616 37.9526 15.4616 38.3431 15.0711L44.7071 8.70711ZM0 9H44V7H0V9Z" /></svg></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- reviews END -->
+
+                    <!-- form add -->
+                    <div class="form-add">
+                        <div class="form-add-container">
+                            <div class="form-add-form">
+                                <div class="main-title">
+                                    <div class="main-title-number">04</div>
+                                    <h2>Заявка на добавление в каталог</h2>
+                                </div>
+                                <form action="#" method="post">
+                                    <div class="form-input"><span>Имя <em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                    <div class="form-input"><span>Телефон <em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /></div>
+                                    <div class="form-checkbox"><label><input type="checkbox" name="policy" class="required" /><span>Я принимаю условия <a href="#">политики конфиденциальности</a><br /> и <a href="#">пользовательского соглашения</a></div>
+                                    <div class="form-submit"><input type="submit" value="Отправить" class="btn" /></div>
+                                </form>
+                            </div>
+
+                            <div class="form-add-img"><img src="images/form-add.jpg" alt="" /></div>
+                        </div>
+
+                    </div>
+                    <!-- form add END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="footer-content">
+                <div class="container">
+
+                    <div class="footer-left">
+                        <div class="footer-logo"></div>
+                        <div class="footer-social">
+                            <a href="#" target="_blank"><img src="images/footer-social-fb.svg" alt="" /></a>
+                            <a href="#" target="_blank"><img src="images/footer-social-yt.svg" alt="" /></a>
+                            <a href="#" target="_blank"><img src="images/footer-social-inst.svg" alt="" /></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-container">
+                        <div class="footer-menu">
+                            <div class="footer-menu-block">
+                                <div class="footer-menu-block-title"><a href="#">Каталог СМИ</a></div>
+                            </div>
+
+                            <div class="footer-menu-block">
+                                <div class="footer-menu-block-title"><a href="#">Услуги</a></div>
+                                <div class="footer-menu-block-list">
+                                    <ul>
+                                        <li><a href="#">Работа со средствами массовой информации</a></li>
+                                        <li><a href="#">Работа с текстами</a></li>
+                                        <li><a href="#">Мониторинг СМИ</a></li>
+                                        <li><a href="#">Прогнозирование охвата будущих публикаций</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="footer-menu-block">
+                                <div class="footer-menu-block-title"><a href="#">О нас</a></div>
+                                <div class="footer-menu-block-list">
+                                    <ul>
+                                        <li><a href="#">О проекте</a></li>
+                                        <li><a href="#">Издательствам</a></li>
+                                        <li><a href="#">Клиентам</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="footer-menu-block">
+                                <div class="footer-menu-block-title"><a href="#">FAQ</a></div>
+                            </div>
+                        </div>
+
+                        <div class="footer-contacts">
+                            <div class="footer-menu-block-title"><a href="#">Контакты</a></div>
+                            <div class="footer-contacts-item footer-contacts-item-email"><a href="mailto:info@e-pr.online">info@e-pr.online</a></div>
+                            <div class="footer-contacts-item footer-contacts-item-phone"><a href="tel:+19295005900">+1 (929) 500-5900</a></div>
+                            <div class="footer-contacts-item footer-contacts-item-address">85 Broad Street, New York, NY 10004</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+
+                    <div class="footer-copyrights">Компания e-PR<br /> © 2019—2020</div>
+
+                    <div class="footer-bottom-menu">
+                        <ul>
+                            <li><a href="#">Карта сайта</a></li>
+                            <li><a href="#">Правила сайта</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                            <li><a href="#">Договор оферты</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/nouislider/nouislider.min.js"></script>
+        <script src="js/nouislider/wNumb.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
