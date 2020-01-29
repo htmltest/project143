@@ -73,7 +73,7 @@ blockquote::before {content:""; display:block; width:58px; height:49px; position
 .message-error .message-title::before {background:url(../images/message-error.svg) no-repeat center}
 .message-error .message-title {color:#ec1d22}
 
-.btn {display:inline-block; margin:0; padding:0 20px; overflow:hidden; outline:none; vertical-align:top; height:50px; text-decoration:none; background:#dc4848; color:#fff; border:none; border-radius:2px; font:18px/50px Arial, Helvetica, sans-serif; letter-spacing:0.05em; text-align:center; position:relative; -webkit-appearance:none; cursor:pointer; transition:all 0.2s}
+.btn {display:inline-block; margin:0; padding:0 20px; overflow:hidden; outline:none; vertical-align:top; height:50px; text-decoration:none; background:#e83733; color:#fff; border:none; border-radius:2px; font:18px/50px Arial, Helvetica, sans-serif; letter-spacing:0.05em; text-align:center; position:relative; -webkit-appearance:none; cursor:pointer; transition:all 0.2s}
 .fonts-loaded .btn {font-family:Rubik, sans-serif}
 .btn:hover {color:#fff; background:#cb4242}
 .btn:active {color:#fff; background:#ea5555}
@@ -145,7 +145,7 @@ label.error {display:block; font-size:12px; line-height:18px; color:#f00; margin
 .form-file-input label.error {display:block; position:absolute; left:0; bottom:0; font-size:12px; line-height:18px; font-weight:normal; color:#f00}
 .form-file-name {padding:10px 0 0 0; color:#181818}
 
-.form-policy {color:#838383}
+.form-policy {color:#838383; margin:28px 0 24px 0}
 .form-policy a {color:#838383; text-decoration:underline}
 .form-policy a:hover {text-decoration:none}
 
@@ -188,9 +188,11 @@ label.error {display:block; font-size:12px; line-height:18px; color:#f00; margin
 .gallery .slick-next:hover {border-color:#0061ff}
 
 .wrapper {width:100%; min-width:480px; min-height:100%; position:relative; overflow:hidden}
-.wrapper-inner {padding:0 0 485px 0}
+.wrapper-inner {padding:66px 0 485px 0}
 
-header {position:relative; z-index:20; background:#fff; border-top:3px solid #0061ff; border-bottom:1px solid #dedede; height:66px}
+header {position:fixed; left:0; top:0; right:0; z-index:20; background:#fff; border-top:3px solid #0061ff; border-bottom:1px solid #dedede; height:66px; transition:transform 0.3s, box-shadow 0.3s}
+.header-fixed header {box-shadow:0px 4px 40px rgba(64, 64, 64, 0.15)}
+.header-fixed header.header-up {transform:translateY(-100%)}
 
 .logo {float:left; width:78px; height:27px; position:relative; background:url(../images/logo.png) no-repeat; margin:19px 0 0 0}
 .logo a {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
@@ -299,9 +301,8 @@ nav ul li ul li.active::after {content:""; display:block; position:absolute; lef
 .catalogue-sort-item label {display:block; cursor:pointer}
 .catalogue-sort-item input {display:none}
 .catalogue-sort-item span {display:block; padding:0 38px 0 13px; color:#939393; transition:all 0.2s}
-.catalogue-sort-item:nth-child(odd) span {background:rgba(245, 245, 245, 0.9)}
-.catalogue-sort-item label:hover span {color:#000}
-.catalogue-sort-item input:checked+span {color:#000}
+.catalogue-sort-item label:hover span {color:#000; background:rgba(245, 245, 245, 0.9)}
+.catalogue-sort-item input:checked+span {color:#000; background:rgba(245, 245, 245, 0.9)}
 .catalogue-sort-item em {display:inline-block; vertical-align:middle; width:10px; height:10px; border-bottom:2px solid #666; position:relative; margin:0 0 0 14px; transition:all 0.2s}
 .catalogue-sort-item em.inverse {border-bottom:none; border-top:2px solid #666}
 .catalogue-sort-item em::before {content:""; display:block; position:absolute; left:0; top:0; width:5px; height:2px; background:#666; transition:all 0.2s}
@@ -358,8 +359,9 @@ nav ul li ul li.active::after {content:""; display:block; position:absolute; lef
 .main-welcome-text {font-size:20px; line-height:26px; padding:17px 0 0 0; max-width:610px; margin:0 auto}
 
 a.main-link {display:block; text-align:center; text-decoration:none; color:#fff; font-weight:500; font-size:18px; line-height:89px; height:83px; letter-spacing:0.05em; text-transform:uppercase; background:#0061ff}
-a.main-link::after {content:""; display:inline-block; vertical-align:middle; width:34px; height:16px; background:url(../images/main-link.svg) no-repeat; margin:-6px 0 0 20px; transition:transform 0.2s}
-a.main-link:hover::after {transform:translateX(10px)}
+a.main-link:hover {background:#3f88fe}
+a.main-link:active {background:#0a59db}
+a.main-link::after {content:""; display:inline-block; vertical-align:middle; width:34px; height:16px; background:url(../images/main-link.svg) no-repeat; margin:-6px 0 0 20px}
 
 .main-title {position:relative}
 .main-title-number {position:absolute; left:0; top:-48px; font:600 90px/135px IBMPlexSans, sans-serif; color:rgba(0, 97, 255, 0.34); opacity:0.3; letter-spacing:0.05em}
@@ -393,7 +395,8 @@ a.main-link:hover::after {transform:translateX(10px)}
 .main-how-item-inner {background:#f3f8fe; text-align:center}
 .main-how-item-icon {padding:4px 0 0 0; height:93px; line-height:89px}
 .main-how-item-icon img {display:inline-block; vertical-align:middle}
-.main-how-item-title {color:#000; padding:0 33px; height:74px; font-weight:normal}
+.main-how-item-title {color:#000; padding:0 33px; height:74px; font-weight:normal; transition:transform 0.2s}
+.main-how-item-inner:hover .main-how-item-title {transform:translateY(-5px)}
 .main-how-item-number {height:33px; background:rgba(229, 240, 253, 0.6); color:#000; font-size:18px; line-height:33px; font-weight:normal}
 
 .main-catalogue {margin:120px 0 0 0; padding:104px 0 82px 0; background:rgba(237, 238, 242, 0.5)}
@@ -499,7 +502,7 @@ a.main-link:hover::after {transform:translateX(10px)}
 
 .card-side {float:right; clear:right; width:377px}
 .card-side-inner {width:377px; position:relative; background:#fff; border:1px solid #ddd; box-shadow:0px 20px 80px rgba(85, 85, 85, 0.07); border-radius:3px; padding:39px 30px 49px 30px}
-.card-side.fixed .card-side-inner {position:fixed; top:0}
+.card-side.fixed .card-side-inner {position:fixed; top:70px}
 .card-side-title {font-weight:500; font-size:20px; line-height:30px; color:#000}
 .card-side-options {margin:24px 0 0 0}
 .card-side-option {display:block; margin:10px 0 0 0; position:relative; color:#353535; border:1px solid #d9d9d9; border-radius:1px; height:60px; line-height:58px; padding:0 0 0 20px; font-size:18px; font-weight:normal; text-decoration:none}
@@ -507,7 +510,7 @@ a.main-link:hover::after {transform:translateX(10px)}
 .card-side-price-title {margin:22px 0 0 0; font-weight:normal; color:#000}
 .card-side-price-value {margin:3px 0 0 0; font-weight:500; font-size:18px; line-height:27px; color:#dc4848}
 .card-side-buy {margin:18px 0 0 0}
-.card-side-buy a {display:block; text-decoration:none; height:50px; font-size:18px; font-weight:normal; line-height:50px; text-align:center; background:#dc4848; border-radius:2px; color:#fff}
+.card-side-buy a {display:block; text-decoration:none; height:50px; font-size:18px; font-weight:normal; line-height:50px; text-align:center; background:#e83733; border-radius:2px; color:#fff}
 .card-side-buy a:hover {color:#fff; background:#cb4242}
 .card-side-buy a:active {color:#fff; background:#ea5555}
 .card-side-buy a::before {content:""; display:inline-block; vertical-align:middle; width:23px; height:21px; background:url(../images/card-side-buy.svg) no-repeat; margin:-2px 18px 0 0}
@@ -670,6 +673,8 @@ a.main-link:hover::after {transform:translateX(10px)}
 .publishings-catalogue {margin:120px 0 0 0; padding:103px 0 86px 0}
 
 .form-add {margin:95px 0 0 0}
+.form-add .form-checkbox {font-size:14px; line-height:21px}
+.form-add .form-checkbox span::before {top:2px}
 
 .form-add-container::after {content:""; display:block; clear:both}
 
@@ -860,8 +865,7 @@ a.news-other-item-link:hover .news-other-item-preview-img::after {opacity:0.2}
 .faq-item-title::before {content:""; display:block; position:absolute; right:32px; top:38px; width:19px; height:2px; border-radius:1px; background:#0061ff}
 .faq-item-title::after {content:""; display:block; position:absolute; right:41px; top:30px; width:2px; height:19px; border-radius:1px; background:#0061ff}
 .faq-item.open .faq-item-title::after {display:none}
-.faq-item-text {position:absolute; left:-9999px; top:-9999px; font-size:18px; line-height:27px; color:rgba(0, 0, 0, 0.6); border-top:1px solid #dadada; margin:0 28px 0 25px; padding:27px 36px 39px 0; opacity:0; transition:opacity 0.2s}
-.faq-item.open .faq-item-text {position:relative; left:auto; top:auto; opacity:1}
+.faq-item-text {display:none; font-size:18px; line-height:27px; color:rgba(0, 0, 0, 0.6); border-top:1px solid #dadada; margin:0 28px 0 25px; padding:27px 36px 39px 0}
 .faq-item-text > *:first-child {margin-top:0}
 .faq-item-text > *:last-child {margin-bottom:0}
 
@@ -912,7 +916,7 @@ a.news-other-item-link:hover .news-other-item-preview-img::after {opacity:0.2}
 .search-result-path {margin:14px 0 0 0; font-size:14px; line-height:21px; color:#000}
 .search-result-path a {color:#000; text-decoration:none}
 .search-result-path a:hover {text-decoration:underline}
-.search-result-path span {display:inline-block; vertical-align:middle; width:6px; height:10px; background:url(../images/breadcrumbs.svg) no-repeat; margin:-2px 10px 0 10px}
+.search-result-path span {display:inline-block; vertical-align:middle; width:6px; height:9px; background:url(../images/breadcrumbs.svg) no-repeat; margin:-2px 7px 0 9px}
 
 .search-results+.pager {text-align:left}
 .search-results+.pager a,
@@ -956,10 +960,10 @@ a.news-other-item-link:hover .news-other-item-preview-img::after {opacity:0.2}
 .tariffs-item-popular .tariffs-item-price path {fill:#efa13d}
 .tariffs-item-link {margin:17px 0 0 0}
 .tariffs-item-link .btn {padding:0 28px; border-radius:5px; background:rgba(220, 72, 72, 0.12); color:#101010}
-.tariffs-item-inner:hover .tariffs-item-link .btn {background:#dc4848; color:#fff}
+.tariffs-item-popular .tariffs-item-link .btn {background:#efa13d; color:#fff}
+.tariffs-item-inner:hover .tariffs-item-link .btn {background:#e83733; color:#fff}
 .tariffs-item-inner:hover .tariffs-item-link .btn:hover {color:#fff; background:#cb4242}
 .tariffs-item-inner:hover .tariffs-item-link .btn:active {color:#fff; background:#ea5555}
-.tariffs-item-popular .tariffs-item-inner:hover .tariffs-item-link .btn {background:#efa13d; color:#fff}
 .tariffs-item-more {padding:34px 0; font-size:16px; line-height:24px; letter-spacing:0; font-weight:normal; color:#979797}
 .tariffs-item-more::after {content:""; display:inline-block; vertical-align:middle; width:12px; height:8px; background:url(../images/tariffs-item-more.svg) no-repeat; margin:-2px 0 0 9px}
 .tariffs-item-detail {position:absolute; left:-9999px; top:-9999px; width:100%; background:#fff; padding:0 20px 20px 20px; font-size:16px; line-height:24px; letter-spacing:0; color:#2f2f2f; opacity:0; transition:opacity 0.2s; text-align:left}

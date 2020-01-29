@@ -182,6 +182,7 @@ $(document).ready(function() {
 
     $('body').on('click', '.faq-item-title', function(e) {
         $(this).parent().toggleClass('open');
+        $(this).parent().find('.faq-item-text').stop(true, true).slideToggle();
         e.preventDefault();
     });
 
@@ -222,6 +223,7 @@ $(document).ready(function() {
 
     $('.header-search-link').click(function(e) {
         $('.search-window').addClass('open');
+        $('.search-window-form-input input').trigger('focus');
         e.preventDefault();
     });
 
@@ -311,6 +313,11 @@ $(document).ready(function() {
         $('html').removeClass('catalogue-sort-open');
 
         filterCatalogue();
+    });
+
+    $('body').on('click', '[data-href]', function(e) {
+        window.open($(this).attr('data-href'), '_blank');
+        e.preventDefault();
     });
 
 });
@@ -489,14 +496,16 @@ $(window).on('load resize scroll', function() {
 
     $('.card-side').each(function() {
         var curBlock = $(this);
-        if (curScroll > curBlock.offset().top) {
-            if (curScroll + curBlock.find('.card-side-inner').outerHeight() > $('.card').offset().top + $('.card').outerHeight()) {
-                curBlock.removeClass('fixed');
+        if (curScroll > curBlock.offset().top - 70) {
+            curBlock.addClass('fixed');
+            if (curScroll + curBlock.find('.card-side-inner').outerHeight() + 70 > $('.card').offset().top + $('.card').outerHeight()) {
+                curBlock.find('.card-side-inner').css({'margin-top': ($('.card').offset().top + $('.card').outerHeight()) - (curScroll + curBlock.find('.card-side-inner').outerHeight() + 70)});
             } else {
-                curBlock.addClass('fixed');
+                curBlock.find('.card-side-inner').css({'margin-top': 0})
             }
         } else {
             curBlock.removeClass('fixed');
+            curBlock.find('.card-side-inner').css({'margin-top': 0})
         }
     });
 });
@@ -582,3 +591,25 @@ function initForm(curForm) {
         ignore: ''
     });
 }
+
+$(window).on('load resize scroll', function() {
+    var curScroll = $(window).scrollTop();
+    if (curScroll > 0) {
+        $('html').addClass('header-fixed');
+        var lastScroll = $('header').data('lastScroll');
+        if (typeof (lastScroll) == 'undefined') {
+            lastScroll = 0;
+        }
+
+        if (Math.abs(lastScroll - curScroll) > 5) {
+            if (curScroll > lastScroll){
+                $('header').addClass('header-up');
+            } else {
+                $('header').removeClass('header-up');
+            }
+            $('header').data('lastScroll', curScroll);
+        }
+    } else {
+        $('html').removeClass('header-fixed');
+    }
+});
