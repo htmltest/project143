@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width" />
     </head>
 
-    <body>
+    <body class="page-bg">
 
         <!-- wrapper -->
         <div class="wrapper">
@@ -45,7 +45,7 @@
                                 </li>
                                 <li><a href="#">Тарифы</a></li>
                                 <li><a href="#">FAQ</a></li>
-                                <li class="active"><a href="#">Контакты</a></li>
+                                <li><a href="#">Контакты</a></li>
                             </ul>
                         </nav>
 
@@ -83,55 +83,25 @@
                     <div class="search-window-close"></div>
                 </div>
 
-                <div class="contacts-header">
-                    <div class="container">
-                        <div class="about-header-inner">
-                            <div class="about-header-container">
-                                <h1>Контакты</h1>
-                                <div class="about-header-text">Мы всегда открыты для конструктивного<br /> диалога с позитивными людьми!</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- container -->
                 <div class="container">
 
-                    <!-- contacts -->
-                    <div class="contacts">
-                        <div class="contacts-info">
-                            <div class="contacts-title">По вопросам сотрудничества</div>
-                            <div class="contacts-list">
-                                <div class="contacts-item">
-                                    <div class="contacts-item-title">Пишите</div>
-                                    <div class="contacts-item-value"><a href="mailto:info@e-pr.online">info@e-pr.online</a></div>
-                                </div>
-                                <div class="contacts-item">
-                                    <div class="contacts-item-title">Звоните</div>
-                                    <div class="contacts-item-value"><a href="tel:+19295005900">+1 (929) 500-5900</a> <span>(WhatsApp)</span></div>
-                                </div>
-                            </div>
-                            <div class="contacts-sep"></div>
-                            <div class="contacts-title">Адрес</div>
-                            <div class="contacts-address">85 Broad Street, New York, NY 10004</div>
-                        </div>
+                    <!-- auth -->
+                    <div class="auth">
+                        <h2>Войти в систему</h2>
+                        <form action="#" method="post">
+                            <div class="form-input"><span>Логин</span><input type="text" name="login" value="" class="required" /></div>
 
-                        <div class="contacts-form">
-                            <div class="contacts-title">Отправить сообщение</div>
-                            <form action="ajax/form-add.html" method="post" class="ajax-form">
-                                <div class="form-input"><span>Имя <em>*</em></span><input type="text" name="name" value="" class="required" /></div>
-                                <div class="form-input"><span>Телефон <em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /></div>
-                                <div class="form-input form-input-textarea"><span>Сообшение<em>*</em></span><textarea name="comment" cols="5" rows="3" class="required">Внешний вид документов о соответствии довольно часто интересует компании, которые выставляют наличие сертификата ГОСТ ISO 9001-2011 в качестве условия заключения контрактов с новыми поставщиками. На этот счет в известном журнале «Quality Digest» опубликована специальная статья Мириам Будро, президента консалтинговой компании</textarea></div>
-                                <div class="form-file">
-                                    <div class="form-file-input"><input type="file" name="file" class="required" /><span>Загрузка файла</span></div>
-                                    <div class="form-file-name"></div>
-                                </div>
-                                <div class="form-checkbox form-policy"><label><input type="checkbox" name="policy" class="required" /><span>Я принимаю условия <a href="#">политики конфиденциальности</a><br /> и <a href="#">пользовательского соглашения</a></span></label></div>
-                                <div class="form-submit"><input type="submit" value="Отправить" class="btn" /></div>
-                            </form>
-                        </div>
+                            <div class="form-input"><span>Пароль</span><input type="password" name="password" value="" class="required" /></div>
+
+                            <div class="form-checkbox"><label><input type="checkbox" name="policy" class="required" /><span>Запомнить меня на этом компьютере</span></label></div>
+
+                            <div class="form-submit"><input type="submit" value="Войти" class="btn" /></div>
+                            
+                            <div class="auth-forgot"><a href="#">Забыли пароль?</a></div>
+                        </form>
                     </div>
-                    <!-- contacts END -->
+                    <!-- auth END -->
 
                 </div>
                 <!-- container END -->

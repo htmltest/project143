@@ -103,6 +103,8 @@ form.loading::after {content:""; display:block; position:absolute; left:0; top:0
 .form-input textarea:focus {border-color:#6bd4f5}
 label.error {display:block; font-size:12px; line-height:18px; color:#f00; margin:5px 0 0 0; font-weight:normal}
 
+.form-input-hint {font-size:12px; line-height:18px; color:#838383; margin:10px 0 0 0; font-weight:normal}
+
 @-webkit-keyframes autofill {to {color:#000; background:transparent}}
 .form-input input:-webkit-autofill {-webkit-animation-name:autofill; -webkit-animation-fill-mode:both}
 
@@ -1020,6 +1022,47 @@ a.news-other-item-link:hover .news-other-item-preview-img::after {opacity:0.2}
 .tariffs-item-detail-item {margin:15px 0 0 0; position:relative; padding:0 0 0 25px}
 .tariffs-item-detail-item:first-child {margin:0}
 .tariffs-item-detail-item::before {content:""; display:block; position:absolute; left:0; top:7px; width:17px; height:11px; background:url(../images/tariffs-item-detail-item.svg) no-repeat}
+
+.registration {margin:78px 0 0 0; position:relative}
+.registration::before {content:""; display:block; position:absolute; left:50%; top:0; bottom:0; width:1px; background:#d7d7d7}
+.registration::after {content:""; display:block; clear:both}
+
+.registration-form {float:left; width:50%; padding:0 129px 0 0}
+.registration-form h2 {margin:0}
+.wrapper .registration-form form {margin:44px 0 0 0}
+.registration-form-login {font-weight:normal; margin:0 0 23px 0; color:#373737}
+.registration-form .form-input {margin:10px 0}
+.registration-form .form-input input {background:#fff}
+.registration-form .form-input span {z-index:1; pointer-events:none}
+.registration-form .form-input input:-webkit-autofill {-webkit-animation-name:autofill-subscribe}
+.registration-form .form-submit {width:300px; margin:18px 0 0 0}
+.registration-form .form-policy {font-size:14px; margin:18px 0 0 0; line-height:21px}
+.registration-form .form-policy span::before {top:2px}
+
+.registration-how {float:right; width:50%; padding:0 0 0 60px}
+.registration-how h3 {margin:0}
+
+.registration-how-list {margin:35px 0 0 0; font-weight:normal; color:#373737; line-height:50px; counter-reset:point}
+.registration-how-item {margin:44px 0 0 0; padding:0 0 0 80px; position:relative}
+.registration-how-item:first-child {margin:0}
+.registration-how-item::before {content:""; display:block; position:absolute; left:24px; top:-44px; bottom:0; width:2px; background:#0061ff}
+.registration-how-item:first-child::before {top:0}
+.registration-how-item::after {content:counter(point); counter-increment:point 1; font-weight:normal; position:absolute; left:0; top:0; color:#454545; font-size:20px; line-height:46px; text-align:center; background:#fff; width:50px; height:50px; border:2px solid #e9e9e9; border-radius:50%}
+
+.auth {margin:138px 0 0 0}
+.auth h2 {margin:0; text-align:center}
+.wrapper .auth form {max-width:491px; margin:31px auto 0 auto}
+.auth .form-input {margin:10px 0}
+.auth .form-input input {background:#fff}
+.auth .form-input span {z-index:1; pointer-events:none}
+.auth .form-input input:-webkit-autofill {-webkit-animation-name:autofill-subscribe}
+.auth .form-checkbox {margin:17px 0 0 0; font-size:14px; line-height:21px}
+.auth .form-checkbox span::before {top:2px}
+.auth .form-submit {width:300px; margin:20px auto 0 auto}
+.auth .form-submit-forgot {width:322px; margin:30px auto 0 auto}
+.auth-forgot {text-align:center; font-weight:normal; margin:20px 0 0 0}
+
+.forgot-text {text-align:center; margin:21px 0 28px 0; font-size:18px; line-height:27px; color:#535353}
 
 footer {height:535px; position:relative; margin:-535px 0 0 0; background:#454545}
 
