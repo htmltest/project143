@@ -1024,7 +1024,7 @@ a.news-other-item-link:hover .news-other-item-preview-img::after {opacity:0.2}
 .tariffs-item-detail-item::before {content:""; display:block; position:absolute; left:0; top:7px; width:17px; height:11px; background:url(../images/tariffs-item-detail-item.svg) no-repeat}
 
 .registration {margin:78px 0 0 0; position:relative}
-.registration::before {content:""; display:block; position:absolute; left:50%; top:0; bottom:0; width:1px; background:#d7d7d7}
+.registration::before {content:""; display:block; position:absolute; left:50%; top:0; bottom:0; width:2px; background:#d7d7d7}
 .registration::after {content:""; display:block; clear:both}
 
 .registration-form {float:left; width:50%; padding:0 129px 0 0}
@@ -1045,9 +1045,11 @@ a.news-other-item-link:hover .news-other-item-preview-img::after {opacity:0.2}
 .registration-how-list {margin:35px 0 0 0; font-weight:normal; color:#373737; line-height:50px; counter-reset:point}
 .registration-how-item {margin:44px 0 0 0; padding:0 0 0 80px; position:relative}
 .registration-how-item:first-child {margin:0}
-.registration-how-item::before {content:""; display:block; position:absolute; left:24px; top:-44px; bottom:0; width:2px; background:#0061ff}
+.registration-how-item::before {content:""; display:block; position:absolute; left:24px; top:-44px; bottom:0; width:2px; background:#d9d9d9}
+.registration-how-item.active::before {background:#0061ff}
 .registration-how-item:first-child::before {top:0}
 .registration-how-item::after {content:counter(point); counter-increment:point 1; font-weight:normal; position:absolute; left:0; top:0; color:#454545; font-size:20px; line-height:46px; text-align:center; background:#fff; width:50px; height:50px; border:2px solid #e9e9e9; border-radius:50%}
+.registration-how-item.active::after {border-color:#0061ff}
 
 .auth {margin:138px 0 0 0}
 .auth h2 {margin:0; text-align:center}
