@@ -103,7 +103,7 @@
                         <h2>Каталог СМИ</h2>
 
                         <div class="catalogue-ctrl">
-                            <form action="ajax/catalogue-filter-list.html" method="post">
+                            <form action="ajax/catalogue-filter.html" method="post">
 
                                 <!-- catalogue filter -->
                                 <div class="catalogue-filter">
@@ -119,7 +119,7 @@
                                                         <div class="catalogue-filter-select" data-placeholder="—">
                                                             <div class="catalogue-filter-select-current"></div>
                                                             <div class="catalogue-filter-select-list">
-                                                                <div class="catalogue-filter-select-item"><label><input type="checkbox" name="country1" /><span>Россия</span></label></div>
+                                                                <div class="catalogue-filter-select-item"><label><input type="checkbox" name="country1" checked="checked" /><span>Россия</span></label></div>
                                                                 <div class="catalogue-filter-select-item"><label><input type="checkbox" name="country2" /><span>Беларусь</span></label></div>
                                                                 <div class="catalogue-filter-select-item"><label><input type="checkbox" name="country3" /><span>Украина</span></label></div>
                                                                 <div class="catalogue-filter-select-item"><label><input type="checkbox" name="country4" /><span>Казахстан</span></label></div>
@@ -147,7 +147,7 @@
                                                         <div class="catalogue-filter-select" data-placeholder="—">
                                                             <div class="catalogue-filter-select-current"></div>
                                                             <div class="catalogue-filter-select-list">
-                                                                <div class="catalogue-filter-select-item"><label><input type="checkbox" name="type1" /><span>Анонс</span></label></div>
+                                                                <div class="catalogue-filter-select-item"><label><input type="checkbox" name="type1" checked="checked" /><span>Анонс</span></label></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -159,8 +159,8 @@
                                                         <div class="catalogue-filter-select" data-placeholder="—">
                                                             <div class="catalogue-filter-select-current"></div>
                                                             <div class="catalogue-filter-select-list">
-                                                                <div class="catalogue-filter-select-item"><label><input type="checkbox" name="theme1" /><span>Новости</span></label></div>
-                                                                <div class="catalogue-filter-select-item"><label><input type="checkbox" name="theme2" /><span>Бизнес</span></label></div>
+                                                                <div class="catalogue-filter-select-item"><label><input type="checkbox" name="theme1" checked="checked" /><span>Новости</span></label></div>
+                                                                <div class="catalogue-filter-select-item"><label><input type="checkbox" name="theme2" checked="checked" /><span>Бизнес</span></label></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -172,7 +172,7 @@
                                                         <div class="catalogue-filter-select" data-placeholder="—">
                                                             <div class="catalogue-filter-select-current"></div>
                                                             <div class="catalogue-filter-select-list">
-                                                                <div class="catalogue-filter-select-item"><label><input type="checkbox" name="typePublication1" /><span>Анонс</span></label></div>
+                                                                <div class="catalogue-filter-select-item"><label><input type="checkbox" name="typePublication1" checked="checked" /><span>Анонс</span></label></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -182,8 +182,8 @@
                                                     <div class="catalogue-filter-item-title">Посещаемость, тыс <div class="catalogue-filter-item-title-values"></div></div>
                                                     <div class="catalogue-filter-item-field">
                                                         <div class="form-slider">
-                                                            <input type="hidden" name="trafficFrom" value="0" class="form-slider-from" />
-                                                            <input type="hidden" name="trafficTo" value="50000" class="form-slider-to" />
+                                                            <input type="hidden" name="trafficFrom" value="10000" class="form-slider-from" />
+                                                            <input type="hidden" name="trafficTo" value="30000" class="form-slider-to" />
                                                             <div class="form-slider-hints">
                                                                 <div class="form-slider-hints-from">от <span></span></div>
                                                                 <div class="form-slider-hints-to">до <span></span></div>
@@ -205,8 +205,8 @@
                                                     <div class="catalogue-filter-item-title">Тираж, экз. <div class="catalogue-filter-item-title-values"></div></div>
                                                     <div class="catalogue-filter-item-field">
                                                         <div class="form-slider">
-                                                            <input type="hidden" name="pressrunFrom" value="0" class="form-slider-from" />
-                                                            <input type="hidden" name="pressrunTo" value="50000" class="form-slider-to" />
+                                                            <input type="hidden" name="pressrunFrom" value="5000" class="form-slider-from" />
+                                                            <input type="hidden" name="pressrunTo" value="40000" class="form-slider-to" />
                                                             <div class="form-slider-hints">
                                                                 <div class="form-slider-hints-from">от <span></span></div>
                                                                 <div class="form-slider-hints-to">до <span></span></div>
@@ -253,8 +253,8 @@
                                 </div>
 
                                 <div class="catalogue-view">
-                                    <a href="#" class="active"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="11.25" height="4.5" /><rect x="6.75" width="4.5" height="4.5" /><rect x="13.5" width="4.5" height="4.5" /><rect y="6.75" width="11.25" height="4.5" /><rect x="6.75" y="6.75" width="4.5" height="4.5" /><rect x="13.5" y="6.75" width="4.5" height="4.5" /><rect y="13.5" width="11.25" height="4.5" /><rect x="6.75" y="13.5" width="4.5" height="4.5" /><rect x="13.5" y="13.5" width="4.5" height="4.5" /></svg></a>
-                                    <a href="#"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="4.5" height="4.5" /><rect x="6.75" width="4.5" height="4.5" /><rect x="13.5" width="4.5" height="4.5" /><rect y="6.75" width="4.5" height="4.5" /><rect x="6.75" y="6.75" width="4.5" height="4.5" /><rect x="13.5" y="6.75" width="4.5" height="4.5" /><rect y="13.5" width="4.5" height="4.5" /><rect x="6.75" y="13.5" width="4.5" height="4.5" /><rect x="13.5" y="13.5" width="4.5" height="4.5" /></svg></a>
+                                    <a href="#" class="active" data-classlist="catalogue-container-list"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="11.25" height="4.5" /><rect x="6.75" width="4.5" height="4.5" /><rect x="13.5" width="4.5" height="4.5" /><rect y="6.75" width="11.25" height="4.5" /><rect x="6.75" y="6.75" width="4.5" height="4.5" /><rect x="13.5" y="6.75" width="4.5" height="4.5" /><rect y="13.5" width="11.25" height="4.5" /><rect x="6.75" y="13.5" width="4.5" height="4.5" /><rect x="13.5" y="13.5" width="4.5" height="4.5" /></svg></a>
+                                    <a href="#" data-classlist=""><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="4.5" height="4.5" /><rect x="6.75" width="4.5" height="4.5" /><rect x="13.5" width="4.5" height="4.5" /><rect y="6.75" width="4.5" height="4.5" /><rect x="6.75" y="6.75" width="4.5" height="4.5" /><rect x="13.5" y="6.75" width="4.5" height="4.5" /><rect y="13.5" width="4.5" height="4.5" /><rect x="6.75" y="13.5" width="4.5" height="4.5" /><rect x="13.5" y="13.5" width="4.5" height="4.5" /></svg></a>
                                 </div>
 
                             </form>
@@ -265,211 +265,157 @@
                     <!-- catalogue container -->
                     <div class="catalogue-container">
 
-                        <!-- catalogue list -->
-                        <div class="catalogue-list">
+                        <!-- catalogue -->
+                        <div class="catalogue">
+                            <div class="catalogue-inner">
 
-                            <!-- catalogue list item -->
-                            <a href="#" class="catalogue-list-item">
-                                <div class="catalogue-list-item-inner">
-                                    <div class="catalogue-list-item-logo"><img src="files/catalogue-01.png" alt="" /></div>
-                                    <div class="catalogue-list-item-content">
-                                        <div class="catalogue-list-item-title">Коммерсант</div>
-                                        <div class="catalogue-list-item-url"><span data-href="http://kommersant.ru">kommersant.ru</span></div>
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-01.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-title">Коммерсант</div>
+                                                <div class="catalogue-item-url"><span data-href="http://kommersant.ru">kommersant.ru</span></div>
+                                            </div>
+                                            <div class="catalogue-item-info">Посещаемость: <span>1 232 K</span></div>
+                                            <div class="catalogue-item-info">Тираж: <span>100 000 экз.</span></div>
+                                            <div class="catalogue-item-info">Язык: <span>Русский</span></div>
+                                            <div class="catalogue-item-flag"><img src="files/flag-01.png" alt="" /></div>
+                                        </a>
                                     </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Посещаемость:</div>
-                                        <div class="catalogue-list-item-info-value">1 232 K</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Тираж:</div>
-                                        <div class="catalogue-list-item-info-value">100 000 экз.</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Язык:</div>
-                                        <div class="catalogue-list-item-info-value">Русский</div>
-                                    </div>
-                                    <div class="catalogue-list-item-flag"><img src="files/flag-01.png" alt="" /></div>
                                 </div>
-                            </a>
-                            <!-- catalogue list item END -->
+                                <!-- catalogue item END -->
 
-                            <!-- catalogue list item -->
-                            <a href="#" class="catalogue-list-item">
-                                <div class="catalogue-list-item-inner">
-                                    <div class="catalogue-list-item-logo"><img src="files/catalogue-02.png" alt="" /></div>
-                                    <div class="catalogue-list-item-content">
-                                        <div class="catalogue-list-item-title">Ведомости</div>
-                                        <div class="catalogue-list-item-url"><span data-href="http://vedomosti.ru">vedomosti.ru</span></div>
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-02.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-title">Ведомости</div>
+                                                <div class="catalogue-item-url"><span data-href="http://vedomosti.ru">vedomosti.ru</span></div>
+                                            </div>
+                                            <div class="catalogue-item-info">Посещаемость: <span>1 232 K</span></div>
+                                            <div class="catalogue-item-info">Тираж: <span>100 000 экз.</span></div>
+                                            <div class="catalogue-item-info">Язык: <span>Русский</span></div>
+                                            <div class="catalogue-item-flag"><img src="files/flag-02.png" alt="" /></div>
+                                        </a>
                                     </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Посещаемость:</div>
-                                        <div class="catalogue-list-item-info-value">1 232 K</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Тираж:</div>
-                                        <div class="catalogue-list-item-info-value">100 000 экз.</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Язык:</div>
-                                        <div class="catalogue-list-item-info-value">Русский</div>
-                                    </div>
-                                    <div class="catalogue-list-item-flag"><img src="files/flag-02.png" alt="" /></div>
                                 </div>
-                            </a>
-                            <!-- catalogue list item END -->
+                                <!-- catalogue item END -->
 
-                            <!-- catalogue list item -->
-                            <a href="#" class="catalogue-list-item">
-                                <div class="catalogue-list-item-inner">
-                                    <div class="catalogue-list-item-logo"><img src="files/catalogue-03.png" alt="" /></div>
-                                    <div class="catalogue-list-item-content">
-                                        <div class="catalogue-list-item-title">Аргументы и факты и факты и факты</div>
-                                        <div class="catalogue-list-item-url"><span data-href="http://aif.ru">aif.ru</span></div>
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-03.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-title">Аргументы и факты и факты и факты</div>
+                                                <div class="catalogue-item-url"><span data-href="http://aif.ru">aif.ru</span></div>
+                                            </div>
+                                            <div class="catalogue-item-info">Посещаемость: <span>1 232 K</span></div>
+                                            <div class="catalogue-item-info">Тираж: <span>100 000 экз.</span></div>
+                                            <div class="catalogue-item-info">Язык: <span>Русский</span></div>
+                                            <div class="catalogue-item-flag"><img src="files/flag-01.png" alt="" /></div>
+                                        </a>
                                     </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Посещаемость:</div>
-                                        <div class="catalogue-list-item-info-value">1 232 K</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Тираж:</div>
-                                        <div class="catalogue-list-item-info-value">100 000 экз.</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Язык:</div>
-                                        <div class="catalogue-list-item-info-value">Русский</div>
-                                    </div>
-                                    <div class="catalogue-list-item-flag"><img src="files/flag-01.png" alt="" /></div>
                                 </div>
-                            </a>
-                            <!-- catalogue list item END -->
+                                <!-- catalogue item END -->
 
-                            <!-- catalogue list item -->
-                            <a href="#" class="catalogue-list-item">
-                                <div class="catalogue-list-item-inner">
-                                    <div class="catalogue-list-item-logo"><img src="files/catalogue-04.png" alt="" /></div>
-                                    <div class="catalogue-list-item-content">
-                                        <div class="catalogue-list-item-title">Ведомости</div>
-                                        <div class="catalogue-list-item-url"><span data-href="http://vedomosti.ru">vedomosti.ru</span></div>
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-04.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-title">Ведомости</div>
+                                                <div class="catalogue-item-url"><span data-href="http://vedomosti.ru">vedomosti.ru</span></div>
+                                            </div>
+                                            <div class="catalogue-item-info">Посещаемость: <span>1 232 K</span></div>
+                                            <div class="catalogue-item-info">Тираж: <span>100 000 экз.</span></div>
+                                            <div class="catalogue-item-info">Язык: <span>Русский</span></div>
+                                            <div class="catalogue-item-flag"><img src="files/flag-03.png" alt="" /></div>
+                                        </a>
                                     </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Посещаемость:</div>
-                                        <div class="catalogue-list-item-info-value">1 232 K</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Тираж:</div>
-                                        <div class="catalogue-list-item-info-value">100 000 экз.</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Язык:</div>
-                                        <div class="catalogue-list-item-info-value">Русский</div>
-                                    </div>
-                                    <div class="catalogue-list-item-flag"><img src="files/flag-03.png" alt="" /></div>
                                 </div>
-                            </a>
-                            <!-- catalogue list item END -->
+                                <!-- catalogue item END -->
 
-                            <!-- catalogue list item -->
-                            <a href="#" class="catalogue-list-item">
-                                <div class="catalogue-list-item-inner">
-                                    <div class="catalogue-list-item-logo"><img src="files/catalogue-02.png" alt="" /></div>
-                                    <div class="catalogue-list-item-content">
-                                        <div class="catalogue-list-item-title">Ведомости</div>
-                                        <div class="catalogue-list-item-url"><span data-href="http://vedomosti.ru">vedomosti.ru</span></div>
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-02.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-title">Ведомости</div>
+                                                <div class="catalogue-item-url"><span data-href="http://vedomosti.ru">vedomosti.ru</span></div>
+                                            </div>
+                                            <div class="catalogue-item-info">Посещаемость: <span>1 232 K</span></div>
+                                            <div class="catalogue-item-info">Тираж: <span>100 000 экз.</span></div>
+                                            <div class="catalogue-item-info">Язык: <span>Русский</span></div>
+                                            <div class="catalogue-item-flag"><img src="files/flag-02.png" alt="" /></div>
+                                        </a>
                                     </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Посещаемость:</div>
-                                        <div class="catalogue-list-item-info-value">1 232 K</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Тираж:</div>
-                                        <div class="catalogue-list-item-info-value">100 000 экз.</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Язык:</div>
-                                        <div class="catalogue-list-item-info-value">Русский</div>
-                                    </div>
-                                    <div class="catalogue-list-item-flag"><img src="files/flag-02.png" alt="" /></div>
                                 </div>
-                            </a>
-                            <!-- catalogue list item END -->
+                                <!-- catalogue item END -->
 
-                            <!-- catalogue list item -->
-                            <a href="#" class="catalogue-list-item">
-                                <div class="catalogue-list-item-inner">
-                                    <div class="catalogue-list-item-logo"><img src="files/catalogue-01.png" alt="" /></div>
-                                    <div class="catalogue-list-item-content">
-                                        <div class="catalogue-list-item-title">Коммерсант</div>
-                                        <div class="catalogue-list-item-url"><span data-href="http://kommersant.ru">kommersant.ru</span></div>
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-01.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-title">Коммерсант</div>
+                                                <div class="catalogue-item-url"><span data-href="http://kommersant.ru">kommersant.ru</span></div>
+                                            </div>
+                                            <div class="catalogue-item-info">Посещаемость: <span>1 232 K</span></div>
+                                            <div class="catalogue-item-info">Тираж: <span>100 000 экз.</span></div>
+                                            <div class="catalogue-item-info">Язык: <span>Русский</span></div>
+                                            <div class="catalogue-item-flag"><img src="files/flag-01.png" alt="" /></div>
+                                        </a>
                                     </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Посещаемость:</div>
-                                        <div class="catalogue-list-item-info-value">1 232 K</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Тираж:</div>
-                                        <div class="catalogue-list-item-info-value">100 000 экз.</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Язык:</div>
-                                        <div class="catalogue-list-item-info-value">Русский</div>
-                                    </div>
-                                    <div class="catalogue-list-item-flag"><img src="files/flag-01.png" alt="" /></div>
                                 </div>
-                            </a>
-                            <!-- catalogue list item END -->
+                                <!-- catalogue item END -->
 
-                            <!-- catalogue list item -->
-                            <a href="#" class="catalogue-list-item">
-                                <div class="catalogue-list-item-inner">
-                                    <div class="catalogue-list-item-logo"><img src="files/catalogue-04.png" alt="" /></div>
-                                    <div class="catalogue-list-item-content">
-                                        <div class="catalogue-list-item-title">Ведомости</div>
-                                        <div class="catalogue-list-item-url"><span data-href="http://vedomosti.ru">vedomosti.ru</span></div>
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-04.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-title">Ведомости</div>
+                                                <div class="catalogue-item-url"><span data-href="http://vedomosti.ru">vedomosti.ru</span></div>
+                                            </div>
+                                            <div class="catalogue-item-info">Посещаемость: <span>1 232 K</span></div>
+                                            <div class="catalogue-item-info">Тираж: <span>100 000 экз.</span></div>
+                                            <div class="catalogue-item-info">Язык: <span>Русский</span></div>
+                                            <div class="catalogue-item-flag"><img src="files/flag-03.png" alt="" /></div>
+                                        </a>
                                     </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Посещаемость:</div>
-                                        <div class="catalogue-list-item-info-value">1 232 K</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Тираж:</div>
-                                        <div class="catalogue-list-item-info-value">100 000 экз.</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Язык:</div>
-                                        <div class="catalogue-list-item-info-value">Русский</div>
-                                    </div>
-                                    <div class="catalogue-list-item-flag"><img src="files/flag-03.png" alt="" /></div>
                                 </div>
-                            </a>
-                            <!-- catalogue list item END -->
+                                <!-- catalogue item END -->
 
-                            <!-- catalogue list item -->
-                            <a href="#" class="catalogue-list-item">
-                                <div class="catalogue-list-item-inner">
-                                    <div class="catalogue-list-item-logo"><img src="files/catalogue-03.png" alt="" /></div>
-                                    <div class="catalogue-list-item-content">
-                                        <div class="catalogue-list-item-title">Аргументы и факты и факты и факты</div>
-                                        <div class="catalogue-list-item-url"><span data-href="http://aif.ru">aif.ru</span></div>
+                                <!-- catalogue item -->
+                                <div class="catalogue-item">
+                                    <div class="catalogue-item-inner">
+                                        <a href="#" class="catalogue-item-container">
+                                            <div class="catalogue-item-logo"><img src="files/catalogue-03.png" alt="" /></div>
+                                            <div class="catalogue-item-content">
+                                                <div class="catalogue-item-title">Аргументы и факты</div>
+                                                <div class="catalogue-item-url"><span data-href="http://aif.ru">aif.ru</span></div>
+                                            </div>
+                                            <div class="catalogue-item-info">Посещаемость: <span>1 232 K</span></div>
+                                            <div class="catalogue-item-info">Тираж: <span>100 000 экз.</span></div>
+                                            <div class="catalogue-item-info">Язык: <span>Русский</span></div>
+                                            <div class="catalogue-item-flag"><img src="files/flag-01.png" alt="" /></div>
+                                        </a>
                                     </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Посещаемость:</div>
-                                        <div class="catalogue-list-item-info-value">1 232 K</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Тираж:</div>
-                                        <div class="catalogue-list-item-info-value">100 000 экз.</div>
-                                    </div>
-                                    <div class="catalogue-list-item-info">
-                                        <div class="catalogue-list-item-info-title">Язык:</div>
-                                        <div class="catalogue-list-item-info-value">Русский</div>
-                                    </div>
-                                    <div class="catalogue-list-item-flag"><img src="files/flag-01.png" alt="" /></div>
                                 </div>
-                            </a>
-                            <!-- catalogue list item END -->
+                                <!-- catalogue item END -->
 
+                            </div>
                         </div>
-                        <!-- catalogue list END -->
+                        <!-- catalogue END -->
 
                         <div class="pager">
                             <a href="#" class="pager-prev"></a>
