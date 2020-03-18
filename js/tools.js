@@ -268,8 +268,16 @@ $(document).ready(function() {
     $('.form-slider').each(function() {
         var curSlider = $(this);
         var curRange = curSlider.find('.form-slider-range-inner')[0];
+        var curStartFrom = Number(curSlider.find('.form-slider-min').html());
+        if (Number(curSlider.find('.form-slider-from').val()) !== 0) {
+            curStartFrom = Number(curSlider.find('.form-slider-from').val());
+        }
+        var curStartTo = Number(curSlider.find('.form-slider-max').html());
+        if (Number(curSlider.find('.form-slider-to').val()) !== 0) {
+            curStartTo = Number(curSlider.find('.form-slider-to').val());
+        }
         noUiSlider.create(curRange, {
-            start: [Number(curSlider.find('.form-slider-from').val()), Number(curSlider.find('.form-slider-to').val())],
+            start: [curStartFrom, curStartTo],
             connect: true,
             range: {
                 'min': Number(curSlider.find('.form-slider-min').html()),
