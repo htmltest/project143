@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/select2/select2.css" />
         <link rel="stylesheet" href="js/nouislider/nouislider.css" />
+        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
 
         <meta name="viewport" content="width=device-width" />
     </head>
@@ -22,7 +23,7 @@
                     <div class="container">
                         <div class="logo"><a href="#"></a></div>
 
-                        <nav>
+                        <nav class="nav">
                             <ul>
                                 <li class="active">
                                     <a href="#" class="nav-parent">О нас</a>
@@ -231,45 +232,37 @@
                             <div class="reviews-list-item">
                                 <div class="reviews-list-item-inner">
                                     <div class="reviews-list-item-avatar"><img src="files/reviews-2.jpg" alt="" /></div>
-                                    <div class="reviews-list-item-content">
-                                        <div class="reviews-list-item-name">Владимир Познер</div>
-                                        <div class="reviews-list-item-post">Российский тележурналист</div>
-                                        <div class="reviews-list-item-anonce">В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.</div>
-                                    </div>
-                                    <div class="reviews-list-item-detail"><a href="#">Подробный отзыв<svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.7071 8.70711C45.0976 8.31658 45.0976 7.68342 44.7071 7.29289L38.3431 0.928932C37.9526 0.538408 37.3195 0.538408 36.9289 0.928932C36.5384 1.31946 36.5384 1.95262 36.9289 2.34315L42.5858 8L36.9289 13.6569C36.5384 14.0474 36.5384 14.6805 36.9289 15.0711C37.3195 15.4616 37.9526 15.4616 38.3431 15.0711L44.7071 8.70711ZM0 9H44V7H0V9Z" /></svg></a></div>
+                                    <div class="reviews-list-item-name">Владимир Познер</div>
+                                    <div class="reviews-list-item-post">Российский тележурналист</div>
+                                    <div class="reviews-list-item-anonce"><div class="reviews-list-item-anonce-inner">В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.<br /> В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который.В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.<br /> В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который</div></div>
+                                    <div class="reviews-list-item-detail"><a href="#"><span>Показать весь отзыв</span><span>Свернуть</span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L11 1" stroke-width="2"/></svg></a></div>
                                 </div>
                             </div>
                             <div class="reviews-list-item">
                                 <div class="reviews-list-item-inner">
                                     <div class="reviews-list-item-avatar"><img src="files/reviews-1.jpg" alt="" /></div>
-                                    <div class="reviews-list-item-content">
-                                        <div class="reviews-list-item-name">Анна Петрова</div>
-                                        <div class="reviews-list-item-post">Тележурналист</div>
-                                        <div class="reviews-list-item-anonce">Например, атрибут  используют, чтобы уменьшить спам-эффект в комментариях. Им помечают потенциально опасный или сомнительный контент.</div>
-                                    </div>
-                                    <div class="reviews-list-item-detail"><a href="#">Подробный отзыв<svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.7071 8.70711C45.0976 8.31658 45.0976 7.68342 44.7071 7.29289L38.3431 0.928932C37.9526 0.538408 37.3195 0.538408 36.9289 0.928932C36.5384 1.31946 36.5384 1.95262 36.9289 2.34315L42.5858 8L36.9289 13.6569C36.5384 14.0474 36.5384 14.6805 36.9289 15.0711C37.3195 15.4616 37.9526 15.4616 38.3431 15.0711L44.7071 8.70711ZM0 9H44V7H0V9Z" /></svg></a></div>
+                                    <div class="reviews-list-item-name">Анна Петрова</div>
+                                    <div class="reviews-list-item-post">Тележурналист</div>
+                                    <div class="reviews-list-item-anonce"><div class="reviews-list-item-anonce-inner">Например, атрибут  используют, чтобы уменьшить спам-эффект в комментариях. Им помечают потенциально опасный или сомнительный контент.</div></div>
+                                    <div class="reviews-list-item-detail"><a href="#"><span>Показать весь отзыв</span><span>Свернуть</span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L11 1" stroke-width="2"/></svg></a></div>
                                 </div>
                             </div>
                             <div class="reviews-list-item">
                                 <div class="reviews-list-item-inner">
                                     <div class="reviews-list-item-avatar"><img src="files/reviews-2.jpg" alt="" /></div>
-                                    <div class="reviews-list-item-content">
-                                        <div class="reviews-list-item-name">Владимир Познер</div>
-                                        <div class="reviews-list-item-post">Российский тележурналист</div>
-                                        <div class="reviews-list-item-anonce">В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.</div>
-                                    </div>
-                                    <div class="reviews-list-item-detail"><a href="#">Подробный отзыв<svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.7071 8.70711C45.0976 8.31658 45.0976 7.68342 44.7071 7.29289L38.3431 0.928932C37.9526 0.538408 37.3195 0.538408 36.9289 0.928932C36.5384 1.31946 36.5384 1.95262 36.9289 2.34315L42.5858 8L36.9289 13.6569C36.5384 14.0474 36.5384 14.6805 36.9289 15.0711C37.3195 15.4616 37.9526 15.4616 38.3431 15.0711L44.7071 8.70711ZM0 9H44V7H0V9Z" /></svg></a></div>
+                                    <div class="reviews-list-item-name">Владимир Познер</div>
+                                    <div class="reviews-list-item-post">Российский тележурналист</div>
+                                    <div class="reviews-list-item-anonce"><div class="reviews-list-item-anonce-inner">В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.<br /> В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который.В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.<br /> В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который</div></div>
+                                    <div class="reviews-list-item-detail"><a href="#"><span>Показать весь отзыв</span><span>Свернуть</span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L11 1" stroke-width="2"/></svg></a></div>
                                 </div>
                             </div>
                             <div class="reviews-list-item">
                                 <div class="reviews-list-item-inner">
                                     <div class="reviews-list-item-avatar"><img src="files/reviews-1.jpg" alt="" /></div>
-                                    <div class="reviews-list-item-content">
-                                        <div class="reviews-list-item-name">Анна Петрова</div>
-                                        <div class="reviews-list-item-post">Тележурналист</div>
-                                        <div class="reviews-list-item-anonce">Например, атрибут  используют, чтобы уменьшить спам-эффект в комментариях. Им помечают потенциально опасный или сомнительный контент.</div>
-                                    </div>
-                                    <div class="reviews-list-item-detail"><a href="#">Подробный отзыв<svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.7071 8.70711C45.0976 8.31658 45.0976 7.68342 44.7071 7.29289L38.3431 0.928932C37.9526 0.538408 37.3195 0.538408 36.9289 0.928932C36.5384 1.31946 36.5384 1.95262 36.9289 2.34315L42.5858 8L36.9289 13.6569C36.5384 14.0474 36.5384 14.6805 36.9289 15.0711C37.3195 15.4616 37.9526 15.4616 38.3431 15.0711L44.7071 8.70711ZM0 9H44V7H0V9Z" /></svg></a></div>
+                                    <div class="reviews-list-item-name">Анна Петрова</div>
+                                    <div class="reviews-list-item-post">Тележурналист</div>
+                                    <div class="reviews-list-item-anonce"><div class="reviews-list-item-anonce-inner">Например, атрибут  используют, чтобы уменьшить спам-эффект в комментариях. Им помечают потенциально опасный или сомнительный контент.</div></div>
+                                    <div class="reviews-list-item-detail"><a href="#"><span>Показать весь отзыв</span><span>Свернуть</span><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L11 1" stroke-width="2"/></svg></a></div>
                                 </div>
                             </div>
                         </div>
@@ -324,6 +317,7 @@
                             <div class="footer-subscribe-title">Подпишитесь на наши новости</div>
                             <form action="#" method="post">
                                 <div class="footer-subscribe-form-input"><input type="text" name="email" value="" class="required email" placeholder="Ваш адрес электронной почты" /></div>
+                                <div class="form-checkbox form-policy"><label><input type="checkbox" name="policy" class="required" /><span>Я принимаю условия <a href="#">пользовательского соглашения</a></span></label></div>
                                 <div class="footer-subscribe-form-submit"><input type="submit" value="Подписаться" class="btn" /></div>
                             </form>
                         </div>
@@ -404,6 +398,7 @@
         <script src="js/select2/ru.js"></script>
         <script src="js/nouislider/nouislider.min.js"></script>
         <script src="js/nouislider/wNumb.js"></script>
+        <script src="js/air-datepicker/datepicker.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

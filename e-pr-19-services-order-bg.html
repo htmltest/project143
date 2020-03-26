@@ -31,16 +31,16 @@
                                         <li><a href="#">О проекте</a></li>
                                         <li><a href="#">Издательствам</a></li>
                                         <li><a href="#">Клиентам</a></li>
-                                        <li><a href="#">Новости</a></li>
+                                        <li class="active"><a href="#">Новости</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Каталог СМИ</a></li>
-                                <li>
+                                <li class="active">
                                     <a href="#" class="nav-parent">Услуги</a>
                                     <ul>
                                         <li><a href="#">Работа со средствами массовой информации</a></li>
                                         <li><a href="#">Работа с текстами</a></li>
-                                        <li><a href="#">Мониторинг СМИ</a></li>
+                                        <li class="active"><a href="#">Мониторинг СМИ</a></li>
                                         <li><a href="#">Прогнозирование охвата будущих публикаций</a></li>
                                     </ul>
                                 </li>
@@ -89,7 +89,7 @@
                         <div class="container">
                             <form action="#" method="post">
                                 <div class="search-window-form-input"><input type="text" name="search" value="" class="required" placeholder="Поиск..." /></div>
-                                <div class="search-window-form-submit"><input type="submit" value="Поиск" /></div>
+                                <div class="search-window-form-submit"><input type="submit" value="" /></div>
                             </form>
                         </div>
                     </div>
@@ -99,44 +99,40 @@
                 <!-- container -->
                 <div class="container">
 
-                    <h2>Результаты поиска</h2>
+                    <h2 class="news-header">Страница заказа услуги</h2>
 
-                    <div class="search-form">
+                    <div class="service-detail">
+                        <div class="service-detail-info">
+                            <div class="service-detail-title">Мониторинг</div>
+                            <div class="service-detail-price">200 000 Р</div>
+                        </div>
+                        <div class="service-detail-text">В октябре по инициативе Всемирной организации здравоохранения (ВОЗ) отмечается День зрения, который призван привлечь внимание к проблемам людей с заболеваниями глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.</div>
+                    </div>
+
+                    <div class="service-order service-order-bg">
                         <form action="#" method="post">
-                            <div class="form-input"><input type="text" name="search" value="Абонентское обслуживание" class="required" placeholder="Поиск..." /></div>
-                            <div class="form-submit"><input type="submit" value="Найти" class="btn" /></div>
+                            <div class="service-order-row">
+                                <div class="service-order-field">
+                                    <div class="form-input"><span>Имя <em>*</em></span><input type="text" name="name" value="" class="required" /></div>
+                                </div>
+                                <div class="service-order-field">
+                                    <div class="form-input"><span>Телефон <em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /></div>
+                                </div>
+                                <div class="service-order-field">
+                                    <div class="form-input"><span>Электронная почта <em>*</em></span><input type="text" name="email" value="" class="required email" /></div>
+                                </div>
+                            </div>
+                            <div class="form-input form-input-textarea"><span>Сообшение</span><textarea name="comment" cols="5" rows="3"></textarea></div>
+                            <div class="service-order-ctrl">
+                                <div class="service-order-ctrl-policy">
+                                    <div class="form-checkbox form-policy"><label><input type="checkbox" name="policy" class="required" /><span>Я принимаю условия <a href="#">политики конфиденциальности</a> и <a href="#">пользовательского соглашения</a></span></label></div>
+                                </div>
+                                <div class="form-submit"><input type="submit" value="Заказать" class="btn" /></div>
+                            </div>
                         </form>
                     </div>
 
-                    <div class="search-results">
-                        <div class="search-result">
-                            <div class="search-result-title"><a href="#"><b>Абонентское обслуживание</b></a></div>
-                            <div class="search-result-anonce">В октябре по инициативе Всемирной организации <b>здравоохранения (ВОЗ) отмечается</b> День зрения, который призван привлечь внимание к проблемам <b>людей с заболеваниями</b> глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.</div>
-                            <div class="search-result-path"><a href="#">e-PR</a><span></span><a href="#">О нас</a><span></span>Новости</div>
-                        </div>
-
-                        <div class="search-result">
-                            <div class="search-result-title"><a href="#"><b>Абонентское обслуживание</b></a></div>
-                            <div class="search-result-anonce">В октябре по инициативе Всемирной организации <b>здравоохранения (ВОЗ) отмечается</b> День зрения, который призван привлечь внимание к проблемам <b>людей с заболеваниями</b> глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.</div>
-                            <div class="search-result-path"><a href="#">e-PR</a><span></span><a href="#">О нас</a><span></span>Новости</div>
-                        </div>
-
-                        <div class="search-result">
-                            <div class="search-result-title"><a href="#"><b>Абонентское обслуживание</b></a></div>
-                            <div class="search-result-anonce">В октябре по инициативе Всемирной организации <b>здравоохранения (ВОЗ) отмечается</b> День зрения, который призван привлечь внимание к проблемам <b>людей с заболеваниями</b> глаз и нарушением зрения. Сеть оптик «Счастливый взгляд» как эксперт в области офтальмологии поддерживает данное начинание.</div>
-                            <div class="search-result-path"><a href="#">e-PR</a><span></span><a href="#">О нас</a><span></span>Новости</div>
-                        </div>
-                    </div>
-
-                    <div class="pager">
-                        <a href="#" class="pager-prev"></a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#" class="pager-next"></a>
-                    </div>
+                    <div class="breadcrumbs"><a href="#">e-PR</a><span></span><a href="#">О нас</a><span></span>Новости</div>
 
                 </div>
                 <!-- container END -->
