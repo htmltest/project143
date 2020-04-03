@@ -766,7 +766,8 @@ $(window).on('load resize', function() {
     $('.main-services-container').each(function() {
         var curList = $(this);
 
-        curList.find('.main-services-item-content').css({'min-height': '0px'});
+        curList.find('.main-services-item-content').css({'height': 'auto'});
+        curList.find('.main-services-item-inner').css({'height': 'auto'});
 
         curList.find('.main-services-item-content').each(function() {
             var curBlock = $(this);
@@ -778,12 +779,18 @@ $(window).on('load resize', function() {
                 if (otherBlock.offset().top == curTop) {
                     var newHeight = otherBlock.outerHeight();
                     if (newHeight > curHeight) {
-                        curBlock.css({'min-height': newHeight + 'px'});
+                        curBlock.css({'height': newHeight + 'px'});
                     } else {
-                        otherBlock.css({'min-height': curHeight + 'px'});
+                        otherBlock.css({'height': curHeight + 'px'});
                     }
                 }
             });
+        });
+
+        curList.find('.main-services-item-content').each(function() {
+            var curBlock = $(this).parent();
+            var curHeight = curBlock.outerHeight();
+            curBlock.css({'height': curHeight + 'px'});
         });
     });
 
@@ -1194,7 +1201,7 @@ function orderFilterUpdate() {
             countFilters++;
         }
     }
-    
+
     if (countFilters == 0) {
         $('.order-press-filter-link span').remove();
     } else {

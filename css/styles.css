@@ -994,7 +994,7 @@ a.main-link span {position:relative}
 }
 .main-services-item-title {font-weight:normal; font-size:20px; line-height:30px; letter-spacing:0; color:#000; transition:all 0.2s}
 @media screen and (min-width:1170px) {
-    .main-services-item-title {position:relative; top:140px; transform:translateY(-100%)}
+    .main-services-item-title {position:relative; top:calc(50% + 35px); transform:translateY(-100%)}
     .main-services-item-inner:hover .main-services-item-title  {color:#fff; top:0; transform:translateY(0)}
 }
 .main-services-item-text {font-size:16px; line-height:24px; letter-spacing:0; padding:12px 0 0 0; opacity:0; transition:all 0.2s}
@@ -1005,8 +1005,8 @@ a.main-link span {position:relative}
 .main-services-item-link svg {display:inline-block; vertical-align:middle; margin:-2px 0 0 15px}
 .main-services-item-link path {fill:#0061ff; transition:all 0.2s}
 @media screen and (min-width:1170px) {
-    .main-services-item-link {transition:all 0.2s; position:relative; transform:translateY(-100px)}
-    .main-services-item-inner:hover .main-services-item-link {transform:translateY(0)}
+    .main-services-item-link {transition:all 0.2s; position:relative; bottom:calc(50% + 21px); transform:translateY(100%)}
+    .main-services-item-inner:hover .main-services-item-link {bottom:0; transform:translateY(0)}
     .main-services-item-inner:hover .main-services-item-link path {fill:#fff}
 }
 
@@ -1014,7 +1014,7 @@ a.main-link span {position:relative}
     .main-services {margin:159px 0 0 0}
     .main-services-container {margin:48px 0 0 0}
     .main-services-item {width:auto; padding:0; margin:24px 0 0 0; display:block}
-    .main-services-item-inner {border:none; background:#f3f8fe; padding:0; position:relative}
+    .main-services-item-inner {border:none; background:#f3f8fe; padding:0; position:relative; height:auto !important}
     .main-services-item-inner::before {content:""; display:block; position:absolute; right:0; top:0; bottom:0; width:80px; background:rgba(229, 240, 253, 0.6)}
     .main-services-item-title {font-size:26px; line-height:39px; padding:40px 104px 40px 40px; position:relative}
     .main-services-item-title::after {content:""; display:block; position:absolute; right:0; top:0; bottom:0; width:80px; background:url(../images/main-why-item-title.svg) no-repeat center}
