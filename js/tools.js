@@ -991,7 +991,7 @@ $(window).on('load resize', function() {
             filterData[$('.order-press-search-window-input input').attr('name')] = $('.order-press-search-window-input input').val();
         }
         if ($('.order-press-pager .pager a.active').length > 0) {
-            filterData['page'] = $('.order-press-pager .pager a.active').html();
+            filterData['page'] = 'page-' + $('.order-press-pager .pager a.active').html();
         }
         $.ajax({
             type: 'POST',
@@ -1036,9 +1036,10 @@ $(window).on('load resize', function() {
                     var pagerHTML = '';
                     if (data.data.pageCount > 1) {
                         pagerHTML += '<div class="pager"><a href="#" class="pager-prev"></a>';
+                        var newCurPage = data.data.page.replace('page-', '');
                         for (var i = 0; i < data.data.pageCount; i++) {
                             var curPage = i + 1;
-                            if (curPage == data.data.page) {
+                            if (curPage == newCurPage) {
                                 pagerHTML += '<a href="#" class="active">' + curPage + '</a>';
                             } else {
                                 pagerHTML += '<a href="#">' + curPage + '</a>';
