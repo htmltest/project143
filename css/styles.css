@@ -133,13 +133,11 @@ form.loading::after {content:""; display:block; position:absolute; left:0; top:0
 .form-input span em {color:#f00; font-style:normal}
 .form-input.focus span,
 .form-input.full span {font-size:13px; line-height:19px; top:11px}
-.form-input-textarea.focus span,
-.form-input-textarea.full span {font-size:16px; line-height:24px; top:14px}
 .form-input input,
 .form-input textarea {position:relative; border:3px solid #e5e5e5; font:16px/24px Arial, sans-serif; color:#000; vertical-align:top; margin:0; padding:25px 18px 5px 18px; width:100%; height:60px; box-sizing:border-box; outline:none; border-radius:4px; background:transparent; -webkit-appearance:none; transition:border-color 0.2s}
 .fonts-loaded .form-input input,
 .fonts-loaded .form-input textarea {font-family:Rubik, sans-serif}
-.form-input textarea {height:99px; resize:none; overflow:auto; padding-top:51px; padding-bottom:22px}
+.form-input textarea {height:99px; resize:none; overflow:auto}
 .form-input input.error,
 .form-input textarea.error {border-color:#ffa7a7}
 .form-input input:hover,
@@ -154,11 +152,9 @@ label.error {display:block; font-size:12px; line-height:18px; color:#f00; margin
     .form-input span em {color:#ff143e}
     .form-input.focus span,
     .form-input.full span {font-size:16px; line-height:24px; top:-11px; z-index:1}
-    .form-input-textarea.focus span,
-    .form-input-textarea.full span {font-size:20px; line-height:30px; top:9px}
     .form-input input,
     .form-input textarea {font-size:20px; line-height:30px; padding:7px 17px; height:50px}
-    .form-input textarea {height:99px; padding-top:51px; padding-bottom:19px; font-weight:300}
+    .form-input textarea {height:99px; font-weight:300}
     label.error {font-size:16px; line-height:24px; margin:3px 0 0 0}
 }
 
@@ -433,10 +429,9 @@ header {position:fixed; left:0; top:0; right:0; z-index:20; background:#fff; bor
     .nav-contacts-phone {position:relative; font-size:20px; line-height:26px; margin:20px 0 0 0}
     .nav-contacts-phone a {display:inline-block; vertical-align:top; padding:0 0 0 48px; color:rgba(29, 29, 29, 0.7); text-decoration:none}
     .nav-contacts-phone a::before {content:""; display:block; width:20px; height:21px; position:absolute; left:0; top:50%; background:url(../images/nav-contacts-phone.svg) no-repeat; transform:translateY(-50%)}
-    .nav-contacts-social {padding:37px 0 0 0}
+    .nav-contacts-social {margin:12px 0 0 -25px}
     .nav-contacts-social::after {content:""; display:block; clear:both}
-    .nav-contacts-social a {float:left; margin:0 0 0 25px}
-    .nav-contacts-social a:first-child {margin:0}
+    .nav-contacts-social a {float:left; margin:25px 0 0 25px}
 }
 
 .header-user {float:right; margin:12px 0 0 0; position:relative}
@@ -1350,7 +1345,7 @@ a.main-link span {position:relative}
     .about-header-text {margin:18px 0 0 0; max-width:none}
 }
 
-.about-sections {margin:137px -20px 0 -20px}
+.about-sections {margin:0 -20px; padding:137px 0 0 0}
 .about-sections-container {display:table; width:100%; border-collapse:separate; border-spacing:20px 0}
 .about-sections-item {display:table-cell; vertical-align:top; width:50%; border:1px solid #0061ff; padding:65px 40px 96px 40px; position:relative}
 .about-sections-item::before {content:""; display:block; position:absolute; left:-1px; bottom:-6px; right:-1px; height:5px; background:#0061ff; transition:all 0.3s; transform:scale(0, 1); transform-origin:left center}
@@ -1371,7 +1366,7 @@ a.main-link span {position:relative}
 .about-sections-item-link a:hover::after {width:67px}
 
 @media screen and (max-width:1169px) {
-    .about-sections {margin:119px 0 0 0}
+    .about-sections {margin:0; padding:119px 0 0 0}
     .about-sections-container {display:block; width:auto; border-spacing:0}
     .about-sections-item {display:block; width:auto; margin:107px 0 0 0; border:none; background:#f3f8fe; padding:65px 40px 32px 40px}
     .about-sections-item-icon {width:90px; height:90px; top:-45px; line-height:90px}
@@ -1954,34 +1949,32 @@ a.news-other-item-link:hover {color:#0061ff}
 }
 
 .search-window {position:fixed; left:-9999px; top:-9999px; z-index:100}
-.search-window-bg {position:fixed; left:-9999px; top:-9999px; background:rgba(64, 108, 181, 0.8); cursor:pointer}
+.search-window-bg {position:fixed; left:-9999px; top:-9999px; background:rgba(255, 255, 255, 0.94); cursor:pointer}
 .search-window-open .search-window {left:0; top:0; right:0; bottom:0}
 .search-window-open .search-window-bg {left:0; top:0; right:0; bottom:0}
 .search-window-form {position:absolute; left:0; top:50%; right:0; transform:translateY(-50%)}
 .wrapper .search-window-form form {margin:0 auto; padding:0 25px 0 0; max-width:766px; position:relative}
-.wrapper .search-window-form form::after {content:""; display:block; position:absolute; left:0; bottom:-2px; right:0; height:2px; background:#fff; transform:scale(0, 1); transition:all 0.3s 0.1s}
+.wrapper .search-window-form form::after {content:""; display:block; position:absolute; left:0; bottom:-2px; right:0; height:2px; background:#000; transform:scale(0, 1); transition:all 0.3s 0.1s}
 .search-window-open .wrapper .search-window-form form::after {transform:scale(1, 1)}
 .search-window-form-input {opacity:0; transition:all 0.3s 0.4s}
 .search-window-open .search-window-form-input {opacity:1}
-.search-window-form-input input {position:relative; border:none; font:normal 20px/50px Rubik, sans-serif; color:#fff; vertical-align:top; margin:0; padding:0; width:100%; height:50px; box-sizing:border-box; outline:none; border-radius:0; background:transparent; -webkit-appearance:none}
-.search-window-form-input input::-webkit-input-placeholder {opacity:1; color:#fff}
-.search-window-form-input input::-moz-placeholder {opacity:1; color:#fff}
-.search-window-form-input input:-ms-input-placeholder {opacity:1; color:#fff}
+.search-window-form-input input {position:relative; border:none; font:normal 20px/50px Rubik, sans-serif; color:#000; vertical-align:top; margin:0; padding:0; width:100%; height:50px; box-sizing:border-box; outline:none; border-radius:0; background:transparent; -webkit-appearance:none}
+.search-window-form-input input::-webkit-input-placeholder {opacity:1; color:#000}
+.search-window-form-input input::-moz-placeholder {opacity:1; color:#000}
+.search-window-form-input input:-ms-input-placeholder {opacity:1; color:#000}
 .search-window-form-input label.error {display:none !important}
 .search-window-form-submit {position:absolute; right:0; bottom:0; opacity:0; transition:all 0.3s 0.4s}
 .search-window-open .search-window-form-submit {opacity:1}
 .search-window-form-submit input {display:block; width:16px; height:50px; background:url(../images/search-window.svg) no-repeat center; border:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; letter-spacing:-1px}
 .search-window-close {position:absolute; right:40px; top:40px; width:20px; height:20px; background:url(../images/search-close.svg) no-repeat; cursor:pointer}
 
-@-webkit-keyframes autofill-search {to {color:#fff; background:transparent}}
+@-webkit-keyframes autofill-search {to {color:#000; background:transparent}}
 .search-window-form-input input:-webkit-autofill {-webkit-animation-name:autofill-search; -webkit-animation-fill-mode:both}
-
-.search-window-open .wrapper-inner > *:not(.search-window),
-.search-window-open footer {-webkit-filter:blur(5px); -moz-filter:blur(5px); -o-filter:blur(5px); -ms-filter:blur(5px); filter:blur(5px)}
 
 @media screen and (max-width:1169px) {
     .search-window-close {right:23px; top:34px}
     .wrapper .search-window-form form {padding:0; max-width:440px; border-bottom:none}
+    .wrapper .search-window-form form::after {display:none}
     .search-window-form-input input {height:40px; background:url(../images/search-window.svg) no-repeat right 5px; background-size:20px 20px; line-height:30px; padding:0 40px 8px 0; border-bottom:2px solid #000}
     .search-window-form-submit {position:relative; right:auto; bottom:auto; text-align:center; padding:24px 0 0 0}
     .search-window-form-submit input {display:inline-block; margin:0; padding:0; overflow:hidden; outline:none; vertical-align:top; width:178px; height:50px; text-decoration:none; background:#e83733; color:#fff; border:none; border-radius:5px; font:500 18px/50px Arial, Helvetica, sans-serif; letter-spacing:0.05em; text-align:center; position:relative; -webkit-appearance:none; cursor:pointer; transition:all 0.2s}
@@ -1993,7 +1986,7 @@ a.news-other-item-link:hover {color:#0061ff}
 .tariffs-item-inner {background:#fff; padding:0 20px; text-align:center; position:relative}
 .tariffs-item-popular .tariffs-item-inner::before {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #f00; pointer-events:none}
 @media screen and (min-width:1170px) {
-    .tariffs-item-inner:hover {z-index:99}
+    .tariffs-item-inner:hover {z-index:19}
 }
 .tariffs-item-title {border-bottom:2px solid #0061ff; display:table; width:100%}
 .tariffs-item-popular .tariffs-item-title {border-bottom-color:#efa13d}
@@ -2139,7 +2132,7 @@ a.news-other-item-link:hover {color:#0061ff}
 footer {height:566px; position:relative; margin:-566px 0 0 0; background:#454545}
 
 @media screen and (max-width:1169px) {
-    footer {height:auto; margin:70px 0 0 0; padding:0 0 142px 0}
+    footer {height:auto; margin:70px 0 0 0; padding:0 0 216px 0}
     footer.without-margin {margin-top:0}
 }
 
@@ -2151,19 +2144,18 @@ footer {height:566px; position:relative; margin:-566px 0 0 0; background:#454545
 
 .footer-left {float:left; padding:48px 0 0 0}
 .footer-logo {width:86px; height:30px; background:url(../images/footer-logo.png) no-repeat}
-.footer-social {padding:34px 0 0 0}
-.footer-social a {float:left; line-height:0; margin:0 0 0 17px}
-.footer-social a:first-child {margin:0}
+.footer-social {margin:10px 0 0 -20px; max-width:220px}
+.footer-social a {float:left; line-height:0; margin:20px 0 0 20px}
 .footer-social a:hover {opacity:0.7}
-.footer-social a img {display:block; width:36px}
+.footer-social a img {display:block; width:35px; height:35px}
 
 @media screen and (max-width:1169px) {
     .footer-left {float:none; padding:0}
-    .footer-logo {position:absolute; left:23px; bottom:288px; width:166px; height:57px; background:url(../images/footer-logo-mobile.png) no-repeat}
-    .footer-social {padding:24px 0 0 0; position:absolute; left:0; bottom:0; right:0; height:98px; background:#3c3c3c; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
-    .footer-social a {float:none; display:inline-block; vertical-align:top; margin:0 0 0 30px}
-    .footer-social a:first-child {margin:0}
-    .footer-social a img {width:50px}
+    .footer-logo {position:absolute; left:23px; bottom:362px; width:166px; height:57px; background:url(../images/footer-logo-mobile.png) no-repeat}
+    .footer-social {padding:19px 0 0 0; margin:0; position:absolute; left:0; bottom:0; right:0; max-width:none; height:192px; background:#3c3c3c; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
+    .footer-social-inner {max-width:320px; margin:0 auto}
+    .footer-social a {float:none; display:inline-block; vertical-align:top; margin:14px}
+    .footer-social a img {width:48px; height:48px}
 }
 
 .footer-container {float:right; padding:16px 0 0 0}
