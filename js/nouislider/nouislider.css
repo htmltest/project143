@@ -128,7 +128,7 @@
   border-radius: 0;
 }
 .noUi-connect {
-  background: #0061ff;
+  background: #316bce;
 }
 /* Handles and cursors;
  */
@@ -139,7 +139,7 @@
   cursor: ns-resize;
 }
 .noUi-handle {
-  border: 3px solid #0061ff;
+  border: 3px solid #316bce;
   border-radius: 50%;
   background: #fff;
   cursor: pointer;
