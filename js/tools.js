@@ -664,6 +664,99 @@ $(document).ready(function() {
         nextHow();
     });
 
+    $('.up-link').click(function(e) {
+        $('html, body').animate({'scrollTop': 0});
+        e.preventDefault();
+    });
+
+    $('.window-options-buy a').click(function(e) {
+        var curForm = $(this).parents().filter('form');
+        curForm.addClass('loading')
+        $.ajax({
+            type: 'POST',
+            url: curForm.attr('action'),
+            dataType: 'html',
+            data: curForm.serialize(),
+            cache: false
+        }).done(function(html) {
+            curForm.removeClass('loading')
+            $('.window-success-content').html(html);
+
+            $('.window-options-close').trigger('click');
+            var curPadding = $('.wrapper').width();
+            var curWidth = $(window).width();
+            if (curWidth < 480) {
+                curWidth = 480;
+            }
+            var curScroll = $(window).scrollTop();
+            $('html').addClass('window-success-open');
+            curPadding = $('.wrapper').width() - curPadding;
+            $('body').css({'margin-right': curPadding + 'px'});
+            $('header').css({'padding-right': curPadding + 'px'});
+
+            $('.window-success').addClass('open');
+
+            $('.wrapper').css({'top': -curScroll});
+            $('.wrapper').data('curScroll', curScroll);
+            $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
+        });
+        e.preventDefault();
+    });
+
+    $('.card-side-buy a').click(function(e) {
+        $('.card-side-inner').addClass('loading')
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('href'),
+            dataType: 'html',
+            cache: false
+        }).done(function(html) {
+            $('.card-side-inner').removeClass('loading')
+            $('.window-success-content').html(html);
+
+            var curPadding = $('.wrapper').width();
+            var curWidth = $(window).width();
+            if (curWidth < 480) {
+                curWidth = 480;
+            }
+            var curScroll = $(window).scrollTop();
+            $('html').addClass('window-success-open');
+            curPadding = $('.wrapper').width() - curPadding;
+            $('body').css({'margin-right': curPadding + 'px'});
+            $('header').css({'padding-right': curPadding + 'px'});
+
+            $('.window-success').addClass('open');
+
+            $('.wrapper').css({'top': -curScroll});
+            $('.wrapper').data('curScroll', curScroll);
+            $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
+        });
+        e.preventDefault();
+    });
+
+    $('.window-success-close, .window-success-close-link a').click(function(e) {
+        $('.window-success.open').removeClass('open');
+        $('html').removeClass('window-success-open');
+        $('body').css({'margin-right': 0});
+        $('header').css({'padding-right': 0});
+        $('.wrapper').css({'top': 0});
+        $(window).scrollTop($('.wrapper').data('curScroll'));
+        $('meta[name="viewport"]').attr('content', 'width=device-width');
+        e.preventDefault();
+    });
+
+    $('body').on('keyup', function(e) {
+        if (e.keyCode == 27) {
+            if ($('.window-success.open').length > 0) {
+                $('.window-success-close').trigger('click');
+            }
+        }
+    });
+
+    $('body').on('click', '.window-success-bg', function(e) {
+        $('.window-success-close').trigger('click');
+    });
+
 });
 
 var howTimer = null;
@@ -1217,6 +1310,7 @@ function orderFilterUpdate() {
 
 $(window).on('load resize scroll', function() {
     var curScroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
 
     $('.card-side').each(function() {
         var curBlock = $(this);
@@ -1247,6 +1341,20 @@ $(window).on('load resize scroll', function() {
             curBlock.find('.basket-side-inner').css({'margin-top': 0})
         }
     });
+
+    if ($('.up-link').length == 1) {
+        if (curScroll > windowHeight) {
+            $('.up-link').addClass('visible');
+        } else {
+            $('.up-link').removeClass('visible');
+        }
+
+        if (curScroll + windowHeight > $('footer').offset().top) {
+            $('.up-link').css({'margin-bottom': (curScroll + windowHeight) - $('footer').offset().top});
+        } else {
+            $('.up-link').css({'margin-bottom': 0});
+        }
+    }
 });
 
 function initForm(curForm) {

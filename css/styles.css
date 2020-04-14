@@ -346,6 +346,7 @@ header {position:fixed; left:0; top:0; right:0; z-index:20; background:#fff; bor
 
 @media screen and (max-width:1169px) {
     .logo {float:none; width:96px; height:34px; background:url(../images/logo-mobile.png) no-repeat; margin:0 0 0 -48px; position:absolute; left:50%; top:25px}
+    .mobile-menu-open .logo {position:fixed; left:auto; right:238px; z-index:9999}
 }
 
 .nav {float:left; margin:15px 0 0 147px}
@@ -447,15 +448,17 @@ header {position:fixed; left:0; top:0; right:0; z-index:20; background:#fff; bor
 }
 
 .header-cart {float:right; margin:12px 16px 0 0; position:relative}
-.header-cart-link {display:block; width:36px; height:36px; background:rgba(49, 107, 206, 0.06); border-radius:50%; line-height:0; padding:9px 0 0 0; text-align:center}
+.header-cart-link {display:block; width:36px; height:36px; background:rgba(49, 107, 206, 0.06); border-radius:50%; line-height:0; padding:9px 0 0 0; text-align:center; position:relative}
 .header-cart-link:hover {background:rgba(49, 107, 206, 0.12)}
 .header-cart-link svg {display:inline-block; vertical-align:top}
 .header-cart-link path {fill:#316bce}
+.header-cart-link span {display:block; position:absolute; right:-5px; top:-5px; width:17px; height:17px; text-align:center; font-weight:bold; font-size:10px; line-height:18px; color:#fff; background:#b23838; border-radius:50%}
 
 @media screen and (max-width:1169px) {
     .header-cart {float:left; margin:18px 0 0 20px}
     .header-cart-link {width:45px; height:45px; padding:12px 0 0 0}
     .header-cart-link svg {width:23px; height:21px}
+    .header-cart-link span {right:-8px; top:-8px; width:25px; height:25px; font-size:14px; line-height:27px}
 }
 
 .header-lang {float:right; margin:15px 32px 0 0; position:relative}
@@ -473,15 +476,18 @@ header {position:fixed; left:0; top:0; right:0; z-index:20; background:#fff; bor
 .header-lang ul li.active a {color:#316bce}
 
 @media screen and (max-width:1169px) {
-    .header-lang {display:none; position:fixed; float:none; margin:0; z-index:9999; left:calc(100% - 335px); top:19px}
+    .header-lang {display:none; position:fixed; float:none; margin:0; z-index:9999; left:auto; top:17px; right:75px}
     .mobile-menu-open .header-lang {display:block}
-    .header-lang-link {display:none}
-    .header-lang ul {display:block; position:relative; left:auto; top:auto; background:none; border:none; border-radius:0; margin:0}
-    .header-lang ul li {float:left; margin:0 0 0 14px; border:none}
-    .header-lang ul li:first-child {margin:0}
-    .header-lang ul li a {width:50px; height:50px; border-radius:6px; border:1px solid #c8c8c8; color:#737373; font-size:26px; line-height:48px; font-weight:normal}
-    .header-lang ul li:last-child a {border-radius:6px}
-    .header-lang ul li.active a {color:#316bce; font-weight:500; border:1px dashed #316bce}
+    .header-lang-link {width:56px; height:56px; border:1px solid #d0d0d0; border-radius:0; padding:0; text-align:center; font-weight:normal; font-size:26px; line-height:56px; color:#494949}
+    .header-lang.open .header-lang-link {border-radius:0}
+    .header-lang-link::after {display:none}
+    .header-lang ul {width:70px; left:-7px; top:100%; border:1px solid #d0d0d0; border-radius:0; margin:18px 0 0 0; box-shadow:0px 4px 10px rgba(142, 141, 141, 0.25)}
+    .header-lang ul::before {content:""; display:block; width:17px; height:17px; border-left:1px solid #c4c4c4; border-top:1px solid #c4c4c4; background:#fff; transform:rotate(45deg); position:absolute; left:50%; top:-9px; margin-left:-8px}
+    .header-lang ul li {border-color:#d0d0d0; position:relative}
+    .header-lang ul li a {height:54px; color:#737373; font-size:26px; line-height:56px; font-weight:normal}
+    .header-lang ul li:last-child a {border-radius:0}
+    .header-lang ul li.active a {color:#737373}
+    .header-lang ul li.active a::after {content:""; display:inline-block; margin:-2px 0 0 5px; vertical-align:middle; width:0; height:0; border-top:6px solid #316bce; border-left:3px solid transparent; border-right:3px solid transparent}
 }
 
 .mobile-menu-link {display:none}
@@ -1157,6 +1163,7 @@ a.main-link span {position:relative}
 
 .card-side {float:right; clear:right; width:377px}
 .card-side-inner {width:377px; position:relative; background:#fff; border:1px solid #ddd; box-shadow:0px 20px 80px rgba(85, 85, 85, 0.07); border-radius:3px; padding:39px 30px 49px 30px}
+.card-side-inner.loading::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(255, 255, 255, 0.5) url(../images/loading.gif) no-repeat center}
 .card-side.fixed .card-side-inner {position:fixed; top:70px}
 .card-side-title {font-weight:500; font-size:20px; line-height:30px; color:#000}
 .card-side-options {margin:24px 0 0 0}
@@ -1187,9 +1194,11 @@ a.main-link span {position:relative}
 .window-options.open {display:block}
 .window-options::before {content:""; display:inline-block; vertical-align:middle; height:100%}
 .window-options-container {display:inline-block; vertical-align:middle; width:478px; background:#fff; position:relative; text-align:left}
-.window-options-header {position:relative; background:#f3f8fe; height:57px; font-size:16px; font-weight:normal; line-height:57px; color:#000; padding:0 0 0 51px}
-.window-options-close {display:block; position:absolute; right:51px; top:21px; width:15px; height:15px; background:url(../images/window-options-close.svg) no-repeat; background-size:100%}
-.window-options-content {padding:20px 51px 42px 51px}
+.window-options-header {position:relative; background:#f3f8fe; height:57px; font-size:22px; font-weight:500; line-height:57px; color:#000; padding:0 0 0 51px}
+.window-options-close {display:block; position:absolute; right:51px; top:21px; width:15px; height:16px; background:url(../images/window-options-close.svg) no-repeat; background-size:100%}
+.window-options-content {padding:20px 51px 0 51px}
+.window-options-content form {margin:0; padding:0}
+.window-options-content form.loading::after {background-color:rgba(255, 255, 255, 0.5)}
 .window-options-title {display:table; width:100%; border-collapse:collapse}
 .window-options-title-logo {display:table-cell; vertical-align:middle; width:108px}
 .window-options-title-logo-inner {width:108px; height:108px; border:1px solid #cacaca; text-align:center; line-height:86px; padding:10px}
@@ -1202,9 +1211,9 @@ a.main-link span {position:relative}
 .window-options-item::after {content:""; display:block; clear:both}
 .window-options-item .form-checkbox {margin:0; float:left; max-width:250px}
 .window-options-item-price {float:right; max-width:124px; text-align:right; font-weight:normal; color:#dc4848}
-.window-options-summ {border-top:1px solid rgba(194, 194, 194, 0.7); text-align:right; padding:23px 0 0 0; margin:20px 0 0 0; color:#000; line-height:30px; font-weight:normal}
-.window-options-summ-value {display:inline; font-size:20px; font-weight:500; color:#dc4848; margin:0 0 0 5px}
-.window-options-buy {margin:23px 0 0 0}
+.window-options-summ {text-align:right; margin:31px 0 0 0; color:#000; line-height:30px; font-weight:normal}
+.window-options-summ-value {display:inline; font-size:20px; font-weight:500; color:#dc4848; margin:0 0 0 10px}
+.window-options-buy {margin:22px -51px 0 -51px; padding:20px 51px; border-top:1px solid rgba(194, 194, 194, 0.7); background:#f3f8fe}
 .window-options-buy .btn {padding:0; width:100%}
 .window-options-buy .btn::before {content:""; display:inline-block; vertical-align:middle; width:23px; height:21px; background:url(../images/card-side-buy.svg) no-repeat; margin:-2px 18px 0 0}
 
@@ -1212,7 +1221,7 @@ a.main-link span {position:relative}
     .window-options-container {width:440px; border:1px solid #e8e8e8; box-shadow:0px 8px 40px rgba(43, 43, 43, 0.15); margin-top:60px}
     .window-options-header {font-size:20px; padding:0 0 0 20px}
     .window-options-close {right:0; top:-40px; width:20px; height:20px; background-image:url(../images/window-options-close-mobile.svg)}
-    .window-options-content {padding:20px 20px 60px 20px}
+    .window-options-content {padding:20px 20px 0 20px}
     .window-options-title {display:block; width:auto}
     .window-options-title-logo {display:block; width:auto}
     .window-options-title-logo-inner {width:auto; height:255px; line-height:255px}
@@ -1222,14 +1231,51 @@ a.main-link span {position:relative}
     .window-options-section-title {font-size:26px; line-height:39px}
     .window-options-item {margin:15px 0; font-size:18px; line-height:27px}
     .window-options-item .form-checkbox {max-width:290px}
-    .window-options-item-price {font-size:18px; line-height:27px; font-weight:500; max-width:108px}
-    .window-options-summ {padding:30px 0 0 0; margin:38px 0 0 0; line-height:39px; font-size:18px}
+    .window-options-item-price {font-size:18px; line-height:27px; font-weight:normal; max-width:108px}
+    .window-options-summ {border-top:1px solid rgba(194, 194, 194, 0.7); padding:30px 0 0 0; margin:38px 0 0 0; line-height:39px; font-size:18px}
     .window-options-summ-value {font-size:26px}
-    .window-options-buy {margin:37px 0 0 0}
+    .window-options-buy {margin:31px -20px 0 -20px; padding:30px 20px}
 }
 
 .window-options-open,
 .window-options-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+.window-success {display:none; position:fixed; left:0; top:0; right:0; bottom:0; z-index:999; overflow:auto; vertical-align:middle; text-align:center}
+.window-success-bg {position:fixed; left:0; top:0; right:0; bottom:0; background:rgba(41, 41, 41, 0.5); cursor:pointer}
+.window-success.open {display:block}
+.window-success::before {content:""; display:inline-block; vertical-align:middle; height:100%}
+.window-success-container {display:inline-block; vertical-align:middle; width:874px; background:#fff; position:relative; text-align:left}
+.window-success-header {position:relative; background:#f3f8fe; height:57px; font-size:22px; font-weight:500; line-height:57px; color:#000; padding:0 0 0 51px}
+.window-success-close {display:block; position:absolute; right:51px; top:21px; width:15px; height:16px; background:url(../images/window-options-close.svg) no-repeat; background-size:100%}
+.window-success-content {padding:22px 51px 0 51px}
+.window-success-content .basket-content {float:none; width:auto}
+.window-success-content .basket-content-item {border-bottom:none}
+.window-success-count {color:#222; margin:0 0 13px 0}
+.window-success-count-link {display:inline; margin:0 0 0 11px}
+.window-success-ctrl {margin:32px 0 0 0; border-top:1px solid rgba(194, 194, 194, 0.7); background:rgba(194, 194, 194, 0.1); padding:20px 51px}
+.window-success-ctrl::after {content:""; display:block; clear:both}
+.window-success-order-link {float:right; width:376px}
+.window-success-order-link .btn {padding:0; width:100%}
+.window-success-close-link {float:right; margin:15px 34px 0 0; font-weight:normal}
+.window-success-close-link a {color:#8b8b8b; border-bottom:1px dashed #8b8b8b}
+.window-success-close-link a:hover {border-bottom-color:transparent}
+
+@media screen and (max-width:1169px) {
+    .window-success-container {width:440px; border:1px solid #e8e8e8; box-shadow:0px 8px 40px rgba(43, 43, 43, 0.15); margin-top:60px}
+    .window-success-header {font-size:20px; padding:0 0 0 20px}
+    .window-success-close {right:0; top:-40px; width:20px; height:20px; background-image:url(../images/window-options-close-mobile.svg)}
+    .window-success-content {padding:40px 20px 0 20px}
+    .window-success-count {margin:0 0 11px 0}
+    .window-success-count-link {display:block; margin:9px 0 0 0}
+    .window-success-content .basket-content {border-top:none}
+    .window-success-content .basket-content-item {padding:19px 0 0 0}
+    .window-success-ctrl {margin:47px 0 0 0; padding:30px 20px}
+    .window-success-order-link {float:none; width:auto}
+    .window-success-close-link {float:none; margin:20px 0 0 0; font-size:18px; line-height:27px; text-align:center}
+}
+
+.window-success-open,
+.window-success-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
 
 .card-text {float:left; clear:left; width:773px; color:rgba(0, 0, 0, 0.7); margin:60px 0 0 0}
 .card-text-more {display:none}
@@ -1854,9 +1900,10 @@ a.news-other-item-link:hover {color:#316bce}
 .contacts-item {display:table-row}
 .contacts-item-title {display:table-cell; vertical-align:top; padding:10px 55px 0 0; color:#000; font-size:18px; line-height:27px}
 .contacts-item-value {display:table-cell; vertical-align:top; padding:10px 0 0 0; font-size:18px; line-height:27px; color:#000; font-weight:normal}
-.contacts-item-value span {font-weight:300; color:#626262}
+.contacts-item-value span {display:none}
 .contacts-item-value a {text-decoration:none; color:#000; border-bottom:1px dashed #3188ed}
 .contacts-item-value a:hover {border-bottom-color:transparent}
+.contacts-item-value a.contacts-item-whatsapp {display:inline-block; border-bottom:none; vertical-align:middle; line-height:0; margin:-2px 0 0 5px}
 .contacts-sep {height:1px; border-top:1px dashed #747474; margin:43px 0 27px 0}
 .contacts-address {margin:14px 0 0 0; font-weight:normal; font-size:18px; line-height:27px; color:#000}
 
@@ -1866,7 +1913,7 @@ a.news-other-item-link:hover {color:#316bce}
     .contacts-item {display:block; margin:0 0 30px 0}
     .contacts-item-title {display:block; padding:0; font-size:20px; line-height:30px}
     .contacts-item-value {display:block; padding:0; font-size:20px; line-height:30px}
-    .contacts-item-value span {color:#000; display:block}
+    .contacts-item-value span {color:#000; display:block; font-weight:300}
     .contacts-sep {display:none}
     .contacts-address {margin:19px 0 0 0}
 }
@@ -2179,9 +2226,9 @@ footer {height:566px; position:relative; margin:-566px 0 0 0; background:#454545
 .footer-subscribe-form-input input:-ms-input-placeholder {opacity:1; color:#808080}
 .footer-subscribe-form-input input.error {border-color:#ffa7a7}
 .footer-subscribe-form-input label.error {display:none !important}
-.footer-subscribe .form-checkbox {position:absolute; left:0; top:100%; margin:11px 0 0 0; color:#c0c0c0; font-weight:normal}
+.footer-subscribe .form-checkbox {position:absolute; left:0; top:100%; margin:12px 0 0 0; color:#c0c0c0; font-weight:normal; font-size:12px; line-height:18px}
 .footer-subscribe .form-checkbox a {color:#c0c0c0}
-.footer-subscribe .form-checkbox span::before {background-image:url(../images/checkbox-subscribe.svg)}
+.footer-subscribe .form-checkbox span::before {top:-1px; width:18px; height:18px; background-image:url(../images/checkbox-subscribe.svg)}
 
 @media screen and (max-width:1169px) {
     .footer-subscribe {padding:0 0 60px 0}
@@ -2189,12 +2236,12 @@ footer {height:566px; position:relative; margin:-566px 0 0 0; background:#454545
     .footer-subscribe form {margin:21px 0 0 0}
     .footer-subscribe-form-input {float:none; width:auto}
     .footer-subscribe-form-input input {border:3px solid #e5e5e5; font-size:20px; line-height:30px; padding:6px 17px 8px 17px; height:50px; border-radius:4px}
-    .footer-subscribe-form-submit {float:none; width:auto; margin:20px 0 0 0}
+    .footer-subscribe-form-submit {float:none; width:auto; margin:27px 0 0 0}
     .footer-subscribe-form-input input::-webkit-input-placeholder {color:#666}
     .footer-subscribe-form-input input::-moz-placeholder {color:#666}
     .footer-subscribe-form-input input:-ms-input-placeholder {color:#666}
-    .footer-subscribe .form-checkbox {position:relative; left:auto; top:auto; margin:20px 0 0 0; font-weight:300; color:#fff}
-    .footer-subscribe .form-checkbox a {color:#fff}
+    .footer-subscribe .form-checkbox {position:relative; left:auto; top:auto; margin:24px 0 0 0; font-weight:normal; font-size:14px; line-height:21px}
+    .footer-subscribe .form-checkbox span::before {top:-5px; width:28px; height:28px; background-image:url(../images/checkbox-subscribe.svg)}
 }
 
 @-webkit-keyframes autofill-subscribe {to {color:#000; background:#fff}}
@@ -2465,7 +2512,7 @@ a.press-item-link:hover {color:#316bce}
 .basket-side-summ {margin:22px 0 0 0; border-top:1px solid #dfdfdf; padding:20px 0 0 0}
 .basket-side-summ::after {content:""; display:block; clear:both}
 .basket-side-summ-title {float:left; font-weight:500; font-size:18px; line-height:23px; color:#454545; padding:1px 0 0 0}
-.basket-side-summ-value {float:right; font-weight:500; font-size:20px; line-height:24px; color:#316bce}
+.basket-side-summ-value {float:right; font-weight:500; font-size:20px; line-height:24px; color:#e83733}
 .basket-side-btn {margin:38px 0 0 0}
 .basket-side-btn .btn {display:block; padding:0; width:100%}
 
@@ -2542,7 +2589,7 @@ a.press-item-link:hover {color:#316bce}
 }
 
 .order-summ {margin:30px 0 0 0; text-align:right; font-weight:normal; font-size:18px; line-height:24px; color:#454545}
-.order-summ span {font-weight:500; font-size:20px; color:#316bce; margin:0 0 0 12px}
+.order-summ span {font-weight:500; font-size:20px; color:#e83733; margin:0 0 0 12px}
 
 .order-company {margin:65px 0 0 0; border-top:3px solid #ececec; padding:67px 0 70px 0; position:relative}
 .order-company.selected {padding-bottom:0}
@@ -2842,4 +2889,21 @@ a.press-item-link:hover {color:#316bce}
 @media screen and (max-width:1169px) {
     .order-send {border-top:none; padding:0}
     .order-send .form-submit {float:none; width:auto}
+}
+
+.order-auth {max-width:828px; margin:128px auto 0 auto; border:1px solid #dfdfdf; text-align:center; padding:51px 30px 67px 30px}
+.order-auth::before {content:""; display:block; width:52px; height:52px; background:url(../images/order-auth.svg) no-repeat; margin:0 auto}
+.order-auth-text {max-width:480px; margin:21px auto 0 auto; font-weight:normal; color:#000; font-size:20px; line-height:30px}
+.order-auth-btns {margin:32px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
+.order-auth-btns .btn {margin:0 0 0 40px; padding:0; width:157px; height:38px; border-radius:0; line-height:38px; font-size:16px; font-weight:normal}
+.order-auth-btns .btn:first-child {margin:0}
+
+.up-link {display:block; opacity:0; visibility:hidden; position:fixed; z-index:90; right:135px; bottom:20px; width:50px; height:50px; background:#fff url(../images/up-link.svg) no-repeat 13px 17px; border:2px solid rgba(49, 136, 237, 0.56); border-radius:50%; transition:opacity 0.2s, visibility 0.2s; box-shadow:6px 6px 16px rgba(115, 115, 115, 0.25)}
+.up-link.visible {opacity:1; visibility:visible}
+.up-link:hover {border-color:#316bce}
+
+@media screen and (max-width:1169px) {
+    .up-link,
+    .up-link:hover,
+    .up-link:active {right:20px; border-color:#316bce}
 }

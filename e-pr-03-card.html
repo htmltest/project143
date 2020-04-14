@@ -158,7 +158,7 @@
 
                                 <div class="card-side-price-title">Стоимость размещения публикации:</div>
                                 <div class="card-side-price-value">$ <span>2 599</span></div>
-                                <div class="card-side-buy"><a href="#" class="btn">В корзину</a></div>
+                                <div class="card-side-buy"><a href="ajax/cart-add.html" class="btn">В корзину</a></div>
                             </div>
                         </div>
                         <!-- card side END -->
@@ -168,65 +168,67 @@
                             <div class="window-options-bg"></div>
                             <div class="window-options-container">
                                 <div class="window-options-header">
-                                    Добавление опций
+                                    Заказ публикации
                                     <a href="#" class="window-options-close"></a>
                                 </div>
 
                                 <div class="window-options-content">
 
-                                    <div class="window-options-title">
-                                        <div class="window-options-title-logo">
-                                            <div class="window-options-title-logo-inner"><img src="files/window-options-logo.png" alt="" /></div>
-                                        </div>
-                                        <div class="window-options-title-text"><a href="#" target="_blank">kommersant.ru</a></div>
-                                    </div>
-
-                                    <div class="window-options-subtitle">Новость</div>
-
-                                    <div class="window-options-section">
-                                        <div class="window-options-section-title">Опции издания</div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options1_1" checked="checked" /><span>Вывод на главную страницу</span></label>
+                                    <form action="ajax/cart-add.html" method="post">
+                                        <div class="window-options-title">
+                                            <div class="window-options-title-logo">
+                                                <div class="window-options-title-logo-inner"><img src="files/window-options-logo.png" alt="" /></div>
                                             </div>
-                                            <div class="window-options-item-price">$ <span>2 599</span></div>
+                                            <div class="window-options-title-text"><a href="#" target="_blank">kommersant.ru</a></div>
                                         </div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options1_2" /><span>Дублирование в соцсетях</span></label>
-                                            </div>
-                                            <div class="window-options-item-price">$ <span>799</span></div>
-                                        </div>
-                                    </div>
 
-                                    <div class="window-options-section">
-                                        <div class="window-options-section-title">Дополнительные услуги</div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options1_3" checked="checked" /><span>Копирайтинг</span></label>
-                                            </div>
-                                            <div class="window-options-item-price">$ <span>1 599</span></div>
-                                        </div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options1_4" /><span>Рерайтинг</span></label>
-                                            </div>
-                                            <div class="window-options-item-price">$ <span>2 599</span></div>
-                                        </div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options1_5" checked="checked" /><span>Перевод</span></label>
-                                            </div>
-                                            <div class="window-options-item-price">$ <span>699</span></div>
-                                        </div>
-                                    </div>
+                                        <div class="window-options-subtitle">Новость</div>
 
-                                    <div class="window-options-summ">
-                                        Итого:
-                                        <div class="window-options-summ-value">$ <span>2 599</span></div>
-                                    </div>
+                                        <div class="window-options-section">
+                                            <div class="window-options-section-title">Опции издания</div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options1_1" checked="checked" /><span>Вывод на главную страницу новостного издания</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>2 599.00</span></div>
+                                            </div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options1_2" /><span>Дублирование в соцсетях</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>799.00</span></div>
+                                            </div>
+                                        </div>
 
-                                    <div class="window-options-buy"><a href="#" class="btn">В корзину</a></div>
+                                        <div class="window-options-section">
+                                            <div class="window-options-section-title">Дополнительные услуги</div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options1_3" checked="checked" /><span>Копирайтинг</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>1 599.00</span></div>
+                                            </div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options1_4" /><span>Рерайтинг</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>2 599.00</span></div>
+                                            </div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options1_5" checked="checked" /><span>Перевод</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>699.00</span></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="window-options-summ">
+                                            Итого:
+                                            <div class="window-options-summ-value">$ <span>2 599.00</span></div>
+                                        </div>
+
+                                        <div class="window-options-buy"><a href="#" class="btn">В корзину</a></div>
+                                    </form>
 
                                 </div>
                             </div>
@@ -238,59 +240,61 @@
                             <div class="window-options-bg"></div>
                             <div class="window-options-container">
                                 <div class="window-options-header">
-                                    Добавление опций
+                                    Заказ публикации
                                     <a href="#" class="window-options-close"></a>
                                 </div>
 
                                 <div class="window-options-content">
 
-                                    <div class="window-options-title">
-                                        <div class="window-options-title-logo">
-                                            <div class="window-options-title-logo-inner"><img src="files/window-options-logo.png" alt="" /></div>
-                                        </div>
-                                        <div class="window-options-title-text"><a href="#" target="_blank">kommersant.ru</a></div>
-                                    </div>
-
-                                    <div class="window-options-subtitle">Рекламная статья</div>
-
-                                    <div class="window-options-section">
-                                        <div class="window-options-section-title">Опции издания</div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options2_1" /><span>Дублирование в соцсетях</span></label>
+                                    <form action="ajax/cart-add.html" method="post">
+                                        <div class="window-options-title">
+                                            <div class="window-options-title-logo">
+                                                <div class="window-options-title-logo-inner"><img src="files/window-options-logo.png" alt="" /></div>
                                             </div>
-                                            <div class="window-options-item-price">$ <span>799</span></div>
+                                            <div class="window-options-title-text"><a href="#" target="_blank">kommersant.ru</a></div>
                                         </div>
-                                    </div>
 
-                                    <div class="window-options-section">
-                                        <div class="window-options-section-title">Дополнительные услуги</div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options2_2" checked="checked" /><span>Копирайтинг</span></label>
-                                            </div>
-                                            <div class="window-options-item-price">$ <span>1 599</span></div>
-                                        </div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options2_3" /><span>Рерайтинг</span></label>
-                                            </div>
-                                            <div class="window-options-item-price">$ <span>2 599</span></div>
-                                        </div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options2_4" checked="checked" /><span>Перевод</span></label>
-                                            </div>
-                                            <div class="window-options-item-price">$ <span>699</span></div>
-                                        </div>
-                                    </div>
+                                        <div class="window-options-subtitle">Рекламная статья</div>
 
-                                    <div class="window-options-summ">
-                                        Итого:
-                                        <div class="window-options-summ-value">$ <span>2 599</span></div>
-                                    </div>
+                                        <div class="window-options-section">
+                                            <div class="window-options-section-title">Опции издания</div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options2_1" /><span>Дублирование в соцсетях</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>799.00</span></div>
+                                            </div>
+                                        </div>
 
-                                    <div class="window-options-buy"><a href="#" class="btn">В корзину</a></div>
+                                        <div class="window-options-section">
+                                            <div class="window-options-section-title">Дополнительные услуги</div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options2_2" checked="checked" /><span>Копирайтинг</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>1 599.00</span></div>
+                                            </div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options2_3" /><span>Рерайтинг</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>2 599.00</span></div>
+                                            </div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options2_4" checked="checked" /><span>Перевод</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>699.00</span></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="window-options-summ">
+                                            Итого:
+                                            <div class="window-options-summ-value">$ <span>2 599.00</span></div>
+                                        </div>
+
+                                        <div class="window-options-buy"><a href="#" class="btn">В корзину</a></div>
+                                    </form>
 
                                 </div>
                             </div>
@@ -302,64 +306,85 @@
                             <div class="window-options-bg"></div>
                             <div class="window-options-container">
                                 <div class="window-options-header">
-                                    Добавление опций
+                                    Заказ публикации
                                     <a href="#" class="window-options-close"></a>
                                 </div>
 
                                 <div class="window-options-content">
 
-                                    <div class="window-options-title">
-                                        <div class="window-options-title-logo">
-                                            <div class="window-options-title-logo-inner"><img src="files/window-options-logo.png" alt="" /></div>
-                                        </div>
-                                        <div class="window-options-title-text"><a href="#" target="_blank">kommersant.ru</a></div>
-                                    </div>
-
-                                    <div class="window-options-subtitle">Итервью</div>
-
-                                    <div class="window-options-section">
-                                        <div class="window-options-section-title">Опции издания</div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options3_1" checked="checked" /><span>Вывод на главную страницу</span></label>
+                                    <form action="ajax/cart-add.html" method="post">
+                                        <div class="window-options-title">
+                                            <div class="window-options-title-logo">
+                                                <div class="window-options-title-logo-inner"><img src="files/window-options-logo.png" alt="" /></div>
                                             </div>
-                                            <div class="window-options-item-price">$ <span>2 599</span></div>
+                                            <div class="window-options-title-text"><a href="#" target="_blank">kommersant.ru</a></div>
                                         </div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options3_2" /><span>Дублирование в соцсетях</span></label>
-                                            </div>
-                                            <div class="window-options-item-price">$ <span>799</span></div>
-                                        </div>
-                                    </div>
 
-                                    <div class="window-options-section">
-                                        <div class="window-options-section-title">Дополнительные услуги</div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options3_3" checked="checked" /><span>Копирайтинг</span></label>
-                                            </div>
-                                            <div class="window-options-item-price">$ <span>1 599</span></div>
-                                        </div>
-                                        <div class="window-options-item">
-                                            <div class="form-checkbox">
-                                                <label><input type="checkbox" name="options1_5" checked="checked" /><span>Перевод</span></label>
-                                            </div>
-                                            <div class="window-options-item-price">$ <span>699</span></div>
-                                        </div>
-                                    </div>
+                                        <div class="window-options-subtitle">Итервью</div>
 
-                                    <div class="window-options-summ">
-                                        Итого:
-                                        <div class="window-options-summ-value">$ <span>2 599</span></div>
-                                    </div>
+                                        <div class="window-options-section">
+                                            <div class="window-options-section-title">Опции издания</div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options3_1" checked="checked" /><span>Вывод на главную страницу</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>2 599.00</span></div>
+                                            </div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options3_2" /><span>Дублирование в соцсетях</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>799.00</span></div>
+                                            </div>
+                                        </div>
 
-                                    <div class="window-options-buy"><a href="#" class="btn">В корзину</a></div>
+                                        <div class="window-options-section">
+                                            <div class="window-options-section-title">Дополнительные услуги</div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options3_3" checked="checked" /><span>Копирайтинг</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>1 599.00</span></div>
+                                            </div>
+                                            <div class="window-options-item">
+                                                <div class="form-checkbox">
+                                                    <label><input type="checkbox" name="options1_5" checked="checked" /><span>Перевод</span></label>
+                                                </div>
+                                                <div class="window-options-item-price">$ <span>699.00</span></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="window-options-summ">
+                                            Итого:
+                                            <div class="window-options-summ-value">$ <span>2 599.00</span></div>
+                                        </div>
+
+                                        <div class="window-options-buy"><a href="#" class="btn">В корзину</a></div>
+                                    </form>
 
                                 </div>
                             </div>
                         </div>
                         <!-- window options END -->
+
+                        <!-- window success -->
+                        <div class="window-success">
+                            <div class="window-success-bg"></div>
+                            <div class="window-success-container">
+                                <div class="window-success-header">
+                                    Заказ добавлен
+                                    <a href="#" class="window-success-close"></a>
+                                </div>
+
+                                <div class="window-success-content"></div>
+
+                                <div class="window-success-ctrl">
+                                    <div class="window-success-order-link"><a href="#" class="btn">Оформить заказ</a></div>
+                                    <div class="window-success-close-link"><a href="#">добавить еще публикацию</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- window success END -->
 
                         <div class="card-text">
                             <div class="card-text-inner">
@@ -721,6 +746,8 @@
                 </div>
             </div>
         </footer>
+
+        <a href="#" class="up-link"></a>
 
         <script>
             var pathTemplate = './';
