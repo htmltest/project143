@@ -2180,7 +2180,7 @@ a.news-other-item-link:hover {color:#316bce}
 footer {height:566px; position:relative; margin:-566px 0 0 0; background:#454545}
 
 @media screen and (max-width:1169px) {
-    footer {height:auto; margin:70px 0 0 0; padding:0 0 216px 0}
+    footer {height:auto; margin:70px 0 0 0}
     footer.without-margin {margin-top:0}
 }
 
@@ -2198,12 +2198,7 @@ footer {height:566px; position:relative; margin:-566px 0 0 0; background:#454545
 .footer-social a img {display:block; width:35px; height:35px}
 
 @media screen and (max-width:1169px) {
-    .footer-left {float:none; padding:0}
-    .footer-logo {position:absolute; left:23px; bottom:362px; width:166px; height:57px; background:url(../images/footer-logo-mobile.png) no-repeat}
-    .footer-social {padding:19px 0 0 0; margin:0; position:absolute; left:0; bottom:0; right:0; max-width:none; height:192px; background:#3c3c3c; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
-    .footer-social-inner {max-width:320px; margin:0 auto}
-    .footer-social a {float:none; display:inline-block; vertical-align:top; margin:14px}
-    .footer-social a img {width:48px; height:48px}
+    .footer-left {display:none}
 }
 
 .footer-container {float:right; padding:16px 0 0 0}
@@ -2302,14 +2297,21 @@ footer {height:566px; position:relative; margin:-566px 0 0 0; background:#454545
 .footer-bottom-menu ul li {float:left; margin:0 0 0 20px; padding:0}
 .footer-bottom-menu ul li:first-child {margin:0}
 .footer-bottom-menu ul li::before {display:none}
+.footer-bottom .footer-logo {display:none}
+.footer-bottom .footer-social {display:none}
 
 @media screen and (max-width:1169px) {
-    .footer-bottom {height:auto; background:none; font-size:16px}
+    .footer-bottom {height:auto; background:none; font-size:16px; padding:0; position:relative}
     .footer-bottom .container {display:table; display:table; width:100%; border-top:1px solid rgba(229, 229, 229, 0.3); padding:0}
     .footer-bottom a {text-decoration:underline}
-    .footer-copyrights {float:none; line-height:38px; display:table-cell; vertical-align:bottom; padding:0 0 0 20px}
-    .footer-bottom-menu {float:none; font-size:18px; line-height:27px; display:table-cell; vertical-align:bottom; padding:40px 20px 8px 0; width:230px; text-align:right}
+    .footer-copyrights {float:none; line-height:38px; display:table-cell; vertical-align:bottom; padding:97px 0 50px 20px}
+    .footer-bottom-menu {float:none; font-size:18px; line-height:27px; display:table-cell; vertical-align:bottom; padding:40px 20px 58px 0; width:230px; text-align:right}
     .footer-bottom-menu ul li {float:none; margin:20px 0 0 0}
+    .footer-bottom .footer-logo {display:block; position:absolute; left:23px; top:40px; width:166px; height:57px; background:url(../images/footer-logo-mobile.png) no-repeat}
+    .footer-bottom .footer-social {display:block; padding:19px 20px; margin:0; background:#3c3c3c; font-size:0; line-height:0; letter-spacing:-1px; text-align:center; max-width:none}
+    .footer-social-inner {max-width:320px; margin:0 auto}
+    .footer-social a {float:none; display:inline-block; vertical-align:top; margin:14px}
+    .footer-social a img {width:48px; height:48px}
 }
 
 .news-subscribe {margin:80px 0 0 0; background:url(../images/news-subscribe.jpg) no-repeat center; background-size:cover; border-radius:5px; padding:74px 100px 68px 100px}
