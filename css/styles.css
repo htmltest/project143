@@ -1147,7 +1147,7 @@ a.main-link span {position:relative}
 }
 
 .card-types {margin:18px 0 0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
-.card-types-title {display:inline-block; vertical-align:top; margin:10px 0 0 10px; font-size:16px; line-height:32px; color:rgba(0, 0, 0, 0.9)}
+.card-types-title {display:inline-block; vertical-align:top; margin:10px 0 0 10px; font-size:16px; line-height:32px; color:rgba(0, 0, 0, 0.9); letter-spacing:0}
 .card-types-item {display:inline-block; vertical-align:top; background:rgba(178, 56, 56, 0.1); margin:10px 0 0 10px; white-space:nowrap; color:#000; font-size:16px; font-weight:normal; line-height:32px; height:32px; padding:0 12px; letter-spacing:0; text-decoration:none}
 .card-types-item:hover {color:#000; background:rgba(178, 56, 56, 0.23)}
 
@@ -1157,8 +1157,8 @@ a.main-link span {position:relative}
     .card-types-item {margin:0 0 10px 10px; font-size:18px}
 }
 
-.card-themes {margin:16px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
-.card-themes-title {display:inline-block; vertical-align:top; margin:10px 0 0 10px; font-size:16px; line-height:32px; color:rgba(0, 0, 0, 0.9)}
+.card-themes {margin:16px 0 0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
+.card-themes-title {display:inline-block; vertical-align:top; margin:10px 0 0 10px; font-size:16px; line-height:32px; color:rgba(0, 0, 0, 0.9); letter-spacing:0}
 .card-themes-item {display:inline-block; vertical-align:top; background:#eaf0fa; margin:10px 0 0 10px; white-space:nowrap; color:#000; font-size:16px; font-weight:normal; line-height:32px; height:32px; padding:0 12px; letter-spacing:0; text-decoration:none}
 .card-themes-item:hover {color:#000; background:rgba(49, 107, 206, 0.23)}
 
