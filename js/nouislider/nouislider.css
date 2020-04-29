@@ -93,16 +93,23 @@
 .noUi-horizontal .noUi-handle {
   width: 20px;
   height: 20px;
-  right: -10px;
+  right: -18px;
   top: -9px;
+}
+
+.noUi-horizontal .noUi-handle.noUi-handle-upper {
+  right: 0;
 }
 
 @media screen and (max-width:1169px) {
     .noUi-horizontal .noUi-handle {
       width: 35px;
       height: 35px;
-      right: -17px;
+      right: -33px;
       top: -16px;
+    }
+    .noUi-horizontal .noUi-handle.noUi-handle-upper {
+      right: 0;
     }
 }
 .noUi-vertical {
