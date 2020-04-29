@@ -696,16 +696,18 @@ header {position:fixed; left:0; top:0; right:0; z-index:20; background:#fff; bor
     .catalogue-item-inner:hover {box-shadow:0 0 10px rgba(0, 0, 0, 0.1); transform:translateY(-5px)}
 }
 .catalogue-item a.catalogue-item-container {display:block; text-decoration:none; position:relative; padding:0 0 23px 0}
-.catalogue-item-logo {height:169px; position:relative; overflow:hidden; line-height:169px; text-align:center}
+.catalogue-item-logo {height:169px; position:relative; overflow:hidden; line-height:149px; text-align:center; padding:10px}
 .catalogue-item-logo img {max-height:100%; vertical-align:middle; display:inline-block}
 .catalogue-item-content {border-top:5px solid #e8e8e8; padding:57px 30px 0 30px}
 .catalogue-item-title {padding:14px 0 0 0; font-weight:500; font-size:20px; line-height:30px; color:#000; letter-spacing:0}
 .catalogue-item-url {white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:16px; line-height:24px; letter-spacing:0; font-weight:normal}
-.catalogue-item-info {margin:16px 0 0 0; font-size:16px; line-height:24px; letter-spacing:0; color:#4d4d4d; padding:0 30px}
+.catalogue-item-info-wrap {margin:16px 0 0 0}
+.catalogue-item-info {font-size:16px; line-height:24px; letter-spacing:0; color:#4d4d4d; padding:0 30px}
 .catalogue-item-info+.catalogue-item-info {margin:10px 0 0 0}
 .catalogue-item-info span {color:#000; font-weight:normal}
 .catalogue-item-flag {position:absolute; left:30px; top:196px}
-.catalogue-item-flag img {height:35px}
+.catalogue-item-flag img {height:25px; margin:0 0 0 5px}
+.catalogue-item-flag img:first-child {margin:0}
 
 @media screen and (max-width:1169px) {
     .catalogue {margin:30px -10px 40px -10px}
@@ -716,7 +718,9 @@ header {position:fixed; left:0; top:0; right:0; z-index:20; background:#fff; bor
     .catalogue-item-flag {left:20px; top:152px; transform:translateY(-50%)}
     .catalogue-item-title {padding:0}
     .catalogue-item-url {font-size:18px; line-height:27px}
-    .catalogue-item-info {line-height:19px; margin:11px 0 0 0; padding:0 20px}
+    .catalogue-item-info-wrap {margin:11px 0 0 0}
+    .catalogue-item-info {line-height:19px; padding:0 20px}
+    .catalogue-item-info+.catalogue-item-info {margin:11px 0 0 0}
     .catalogue-item-info span {display:block}
 }
 
@@ -730,12 +734,15 @@ header {position:fixed; left:0; top:0; right:0; z-index:20; background:#fff; bor
     .catalogue-container-list .catalogue-item-title {font-weight:500; font-size:20px; line-height:30px; color:#000; padding:0}
     .catalogue-container-list .catalogue-item-url {font-weight:normal; font-size:18px; line-height:27px; color:#3188ed; margin:-4px 0 0 0}
     .catalogue-container-list .catalogue-item-url span:hover {color:#316bce}
-    .catalogue-container-list .catalogue-item-info {display:table-cell; vertical-align:middle; padding:32px 22px 32px 22px; position:relative; margin:0; color:#4d4d4d}
+    .catalogue-container-list .catalogue-item-info-wrap {display:table-cell; margin:0; padding:0 !important}
+    .catalogue-container-list .catalogue-item-info {display:table-cell; vertical-align:middle; padding:32px 22px 32px 22px; position:relative; margin:0; color:#4d4d4d; width:33.33%}
     .catalogue-container-list .catalogue-item-info+.catalogue-item-info {margin:0}
     .catalogue-container-list .catalogue-item-info::before {content:""; display:block; position:absolute; left:0; top:22px; bottom:22px; width:1px; background:#dadada}
     .catalogue-container-list .catalogue-item-info span {display:block; color:#000; font-weight:normal}
     .catalogue-container-list .catalogue-item-flag {display:table-cell; vertical-align:middle; width:109px; text-align:center; position:relative; left:auto; top:auto}
     .catalogue-container-list .catalogue-item-flag::before {content:""; display:block; position:absolute; left:0; top:22px; bottom:22px; width:1px; background:#dadada}
+    .catalogue-container-list .catalogue-item-flag img {margin:5px auto 0 auto; display:block}
+    .catalogue-container-list .catalogue-item-flag img:first-child {margin:0 auto}
 }
 
 .main-welcome {position:relative; overflow:hidden}

@@ -639,7 +639,9 @@ $(document).ready(function() {
                 $('.catalogue-view a.active').removeClass('active');
                 curLink.addClass('active');
                 $('.catalogue-container').addClass(curLink.attr('data-classlist'));
-                $('.catalogue-container').animate({'opacity': 1});
+                $('.catalogue-container').animate({'opacity': 1}, function() {
+                    $(window).trigger('resize');
+                });
             });
         }
         e.preventDefault();
@@ -648,6 +650,7 @@ $(document).ready(function() {
     $('.catalogue-view a.active').each(function() {
         var curLink = $(this);
         $('.catalogue-container').addClass(curLink.attr('data-classlist'));
+        $(window).trigger('resize');
     });
 
     $('.main-how-item-inner').on('mouseover', function() {
@@ -830,6 +833,8 @@ function filterCatalogue() {
     });
 }
 
+var test = false;
+
 $(window).on('load resize', function() {
 
     $('.catalogue-inner').each(function() {
@@ -850,6 +855,26 @@ $(window).on('load resize', function() {
                         curBlock.css({'min-height': newHeight + 'px'});
                     } else {
                         otherBlock.css({'min-height': curHeight + 'px'});
+                    }
+                }
+            });
+        });
+
+        curList.find('.catalogue-item-info-wrap').css({'padding-top': '0px'});
+
+        curList.find('.catalogue-item-info-wrap').each(function() {
+            var curBlock = $(this);
+            var curHeight = curBlock.outerHeight();
+            var curTop = curBlock.parent().offset().top;
+
+            curList.find('.catalogue-item-info-wrap').each(function() {
+                var otherBlock = $(this);
+                if (otherBlock.parent().offset().top == curTop) {
+                    var newHeight = otherBlock.outerHeight();
+                    if (newHeight >= curHeight) {
+                        curBlock.css({'padding-top': (newHeight - curHeight) + 'px'});
+                    } else {
+                        otherBlock.css({'padding-top': (curHeight - newHeight) + 'px'});
                     }
                 }
             });
